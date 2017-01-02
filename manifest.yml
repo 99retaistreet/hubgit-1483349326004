@@ -3,8 +3,8 @@ applications:
   memory: 128M
   instances: 1
   domain: mybluemix.net
-  name: webs99
-  host: webs99
+  name: hubgit
+  host: hubgit
   disk_quota: 1024M
   buildpack: https://github.com/ibmdb/db2heroku-buildpack-php
   
