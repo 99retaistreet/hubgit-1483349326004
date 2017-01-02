@@ -90,7 +90,6 @@ table#t01 th {
     }
     </script>
 </head>
-</head>
 <body>
 <div class="container">
     <h1>Shopping Cart</h1>
@@ -132,10 +131,47 @@ table#t01 th {
             <td colspan="2"></td>
             <?php if($cart->total_items() > 0){ ?>
             <td class="text-center"><strong>Total: <?php echo 'RS'.$cart->total().''; ?></strong></td>
-            <td><a href="checkout.php"><i class="glyphicon glyphicon-menu-right"></i><img src="images/button_checkout.png"></a></td>
+            
+           <td><a href="javascript:void(0)" <i class="glyphicon glyphicon-menu-right"></i> <img src="images/button_checkout.png"> onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">here</a></td>
             <?php } ?>
         </tr>
     </tfoot>
     </table>
 </div>
+	<style>
+
+.black_overlay {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: .80;
+  filter: alpha(opacity=80);
+}
+.white_content {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  padding: 16px;
+  border: 16px solid orange;
+  background-color: white;
+  z-index: 1002;
+  overflow: auto;
+}
+</style>
+  <div id="light" class="white_content">
+<?php
+include 'Checkout.php';
+?>
+. <a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a>
+  </div>
+  <div id="fade" class="black_overlay"></div>
 
