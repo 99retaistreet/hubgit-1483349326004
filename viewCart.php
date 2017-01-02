@@ -154,12 +154,12 @@ table#t01 th {
   filter: alpha(opacity=80);
 }
 .white_content {
-  display: none;
+ display: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 75%;
-  height: 75%;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
   padding: 16px;
   border: 16px solid blue;
   background-color: white;
