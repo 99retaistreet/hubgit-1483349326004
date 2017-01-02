@@ -161,10 +161,14 @@ table#t01 th {
   width: 50%;
   height: 50%;
   padding: 16px;
-  border: 16px solid orange;
+  border: 16px solid blue;
   background-color: white;
   z-index: 1002;
   overflow: auto;
+}
+		@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
 }
 </style>
   <div id="light" class="white_content">
@@ -215,7 +219,7 @@ $_Session['Prod_Id']=$item["PROD_ID"]
             <td class="text-center"><strong>Total <?php echo 'Rs'.$cart->total().''; ?></strong></td>
             <?php } ?>
     
-        <a href="index.php">  Continue Shopping</a>
+ 
        
     
     
