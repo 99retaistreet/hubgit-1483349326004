@@ -156,34 +156,27 @@ table#t01 th {
 .white_content {
   display: none;
   position: absolute;
-  top: 25%;
-  left: 25%;
-  width: 50%;
-  height: 50%;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  height: 75%;
   padding: 16px;
   border: 16px solid blue;
   background-color: white;
   z-index: 1002;
   overflow: auto;
+	-webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
 }
 	
-}
-			@keyframes animatetop {
+@keyframes animatetop {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
-.close {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
 }
+		
 
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
 </style>
   <div id="light" class="white_content">
     
@@ -216,17 +209,7 @@ $_Session['Prod_Id']=$item["PROD_ID"]
   <script>
 	  var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-	  </script>
-	     <span class="close">&times;</span>
        <tr class="table_fields_top">
             <td><?php echo $item["PROD_NM"]; ?></td>
             <td><?php echo 'Rs'.$item["price"].''; ?></td>
