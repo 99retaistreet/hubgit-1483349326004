@@ -166,9 +166,23 @@ table#t01 th {
   z-index: 1002;
   overflow: auto;
 }
-		@keyframes animatetop {
+	
+}
+			@keyframes animatetop {
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 </style>
   <div id="light" class="white_content">
@@ -199,7 +213,20 @@ $_Session['Qty']=$item["qty"];
 $_Session['Subtotal']=$item["subtotal"];
 $_Session['Prod_Id']=$item["PROD_ID"]
 ?>
-        
+  <script>
+	  var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+	  </script>
+	     <span class="close">&times;</span>
        <tr class="table_fields_top">
             <td><?php echo $item["PROD_NM"]; ?></td>
             <td><?php echo 'Rs'.$item["price"].''; ?></td>
@@ -228,7 +255,7 @@ $_Session['Prod_Id']=$item["PROD_ID"]
 
     </tfoot>
     </table>
-. <a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a>
+
   </div>
   <div id="fade" class="black_overlay"></div>
 
