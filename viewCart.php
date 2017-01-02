@@ -132,7 +132,7 @@ table#t01 th {
             <?php if($cart->total_items() > 0){ ?>
             <td class="text-center"><strong>Total: <?php echo 'RS'.$cart->total().''; ?></strong></td>
             
-           <td><a href="javascript:void(0)" <i class="glyphicon glyphicon-menu-right"></i> <img src="images/button_checkout.png"> onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">here</a></td>
+           <td><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'" <i class="glyphicon glyphicon-menu-right"></i> <img src="images/button_checkout.png"> </a></td>
             <?php } ?>
         </tr>
     </tfoot>
