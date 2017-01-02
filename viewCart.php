@@ -158,8 +158,8 @@ table#t01 th {
   position: absolute;
   top: 25%;
   left: 25%;
-  width: 50%;
-  height: 50%;
+  width: 75%;
+  height: 75%;
   padding: 16px;
   border: 16px solid blue;
   background-color: white;
@@ -206,8 +206,6 @@ $_Session['Qty']=$item["qty"];
 $_Session['Subtotal']=$item["subtotal"];
 $_Session['Prod_Id']=$item["PROD_ID"]
 ?>
-  <script>
-	  var span = document.getElementsByClassName("close")[0];
 
 
        <tr class="table_fields_top">
