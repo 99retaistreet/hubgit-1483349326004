@@ -1,0 +1,13 @@
+<?php
+//After success redirection from AWS S3 
+if(isset($_GET["key"]))
+{
+    $filename = $_GET["key"];
+    $ext = pathinfo($filename, PATHINFO_EXTENSION);
+    if(in_array($ext, array("jpg", "png", "gif", "jpeg"))){
+        echo '<hr />Image File Uploaded : <br /><img src="http://'.$my_bucket.'.s3.amazonaws.com/'.$_GET["key"].'" style="width:100%;" />';
+    }else{
+        echo '<hr />File Uploaded : <br /><a href="http://'.$my_bucket.'.s3.amazonaws.com/'.$_GET["key"].'">'.$filename.'</a>';
+    }
+}
+?>

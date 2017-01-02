@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Retail Solution Pvt Ltd</title>
+    <title>99 Retail Solution Pvt Ltd</title>
 	
     <!-- css -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -58,7 +58,7 @@
 <p class="bold text-left">Monday - Saturday, 8am to 10pm </p>
 </div>
 <div class="col-sm-6 col-md-6">
-<p class="bold text-right">Call us now </p>
+<p class="bold text-right">Call us </p>
 </div>
 </div>
 </div>
@@ -77,8 +77,26 @@
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
 <ul class="nav navbar-nav">
-
-
+<li class="active"><a href="#intro">Home</a></li>
+<li><a href="#service">Service</a></li>
+<li><a href="#doctor">Doctors</a></li>
+<li><a href="#facilities">Facilities</a></li>
+<li><a href="#pricing">Pricing</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right">Extra</span>More <b class="caret">
+</b>
+</a>
+<ul class="dropdown-menu">
+<li><a href="index.html">Home form</a></li>
+<li><a href="index-video.html">Home video</a></li>
+<li><a href="index-cta.html">Home CTA</a></li>
+<li><a href="https://bootstrapmade.com">Download</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+ </div>
  <!-- /.container -->
   </nav>
 	
@@ -111,60 +129,45 @@
 <div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
 <div class="panel panel-skin">
 <div class="panel-heading">
-<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span>Sign IN HERE <small>(It's free!)</small></h3>
+<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span>REGISTER HERE <small>(It's free!)</small></h3>
 </div>
 <div class="panel-body">
-
-
-<form role="form" class="lead" action="signcheck.php" method="post">
-
-<script>
-
-
-
-
-    // WRITE THE VALIDATION SCRIPT IN THE HEAD TAG.
-    function isNumber(evt) {
-        var iKeyCode = (evt.which) ? evt.which : evt.keyCode
-        if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
-            return false; 
-
-        return true;
-
-}
-
-
-        
-</script>
+<form role="form" action="code_exec.php" class="lead" method="post">
 <div class="row">
 <div class="col-xs-6 col-sm-6 col-md-6">
 <div class="form-group">
 <label>Mobile_no</label>
-
-<input type="text" ID="tbNumbers" name="Mobile_No" class="form-control input-md" required maxlength="10" placeholder="Mobile_No" onkeypress="javascript:return isNumber(event)" />
+<input type="text" ID="tbNumbers" name="mobile_no"class="form-control input-md" required maxlength="10" onkeypress="javascript:return isNumber(event)"/>
 </div>
 </div>
+<div class="col-xs-6 col-sm-6 col-md-6">
+<div class="form-group">
+<label>Name</label>
 
+<input type="text" name="name" required class="form-control input-md"/>
+</div>
+</div>
+</div>
 
+<div class="row">
+<div class="col-xs-6 col-sm-6 col-md-6">
+<div class="form-group">
+<label>Email</label>
+
+<input type="text" name="e_mail" id="email" class="form-control input-md" E_MAIL required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
+</div>
+</div>
 <div class="col-xs-6 col-sm-6 col-md-6">
 <div class="form-group">
 <label>Password</label>
 
-<input type="password" name="password" class="form-control input-md" placeholder="password" required>
+<input type="password" name="password" class="form-control input-md" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"/>
 </div>
 </div>
 </div>
-<div id="openModal" class="modalDialog">
-	
-
 <input type="submit" value="Submit" class="btn btn-skin btn-block btn-lg">
-</div>
-<p class="lead-footer">* Do Not Have A Account Plze Register</p>
-<a href="register.php">Register</a> 
-
+<p class="lead-footer">* We'll contact you by phone & email later</p>
 </form>
-
-
 </div>
 </div>				
 </div>
@@ -196,6 +199,5 @@
 
 
 </body>
-
-
+<?php include'footer.php';?>
 </html>
