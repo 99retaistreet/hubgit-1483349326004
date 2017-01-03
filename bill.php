@@ -58,14 +58,7 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-			  <ul class="nav navbar-nav">
-				<li class="active"><a href="#intro">Home</a></li>
-				<li><a href="#service">Service</a></li>
-				<li><a href="#doctor">Doctors</a></li>
-				<li><a href="#facilities">Facilities</a></li>
-				<li><a href="#pricing">Pricing</a></li>
-				
-			  </ul>
+			
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -74,7 +67,7 @@
 	
 
 	<!-- Section: intro -->
-    <section id="intro" class="intro">
+    <section id="boxes" class="home-section paddingtop-80">
 		<div class="intro-content">
 			<div class="container">
 				<div class="row">
@@ -87,7 +80,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3 col-md-3">
-                                 <div class="well well-trans">
+                              
 <div class="wow fadeInRight" data-wow-delay="0.1s">
 <ul class="lead-list">
 					<div class="wow fadeInUp" data-wow-delay="0.2s">
@@ -163,7 +156,7 @@ $_Session['Prod_Id']=$item["PROD_ID"]
        
     
     
-    <td> <h4 class="h-bold"><a href="#" onclick="toggle_visibility('foo');">Place Order</h4></td>
+    
 </tr>
 
     </tfoot>
@@ -189,7 +182,7 @@ $_Session['Prod_Id']=$item["PROD_ID"]
 						          
 							<div class="panel panel-skin">
 							<div class="panel-heading">
-									<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Upload Your Priscription </h3>
+									<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> <h3>Billing Info</h3>
 									</div>
 									<div class="panel-body">
 			<script language="javascript">
