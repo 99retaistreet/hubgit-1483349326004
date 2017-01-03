@@ -178,6 +178,17 @@ table#t01 th {
 		
 
 </style>
+
+<script>
+<script language="Javascript">
+
+        function redirectToFB(){
+            window.opener.location.href="bill.php";
+            self.close();
+        }
+
+    </script>
+</script>
   <div id="light" class="white_content">
     
 
@@ -231,7 +242,8 @@ $_Session['Prod_Id']=$item["PROD_ID"]
        
     
     
-    <td> <a href="bill.php">Place Order</a></td>
+    <td> 
+<input type="button" value="Place Order" OnClick="redirectToFB()" /></td>
 </tr>
 
     </tfoot>
@@ -239,4 +251,3 @@ $_Session['Prod_Id']=$item["PROD_ID"]
 
   </div>
   <div id="fade" class="black_overlay"></div>
-
