@@ -67,7 +67,7 @@
 	
 
 	<!-- Section: intro -->
-    <section id="boxes" class="home-section paddingtop-80">
+    <section id="intro" class="intro">
 		<div class="intro-content">
 			<div class="container">
 				<div class="row">
@@ -80,11 +80,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3 col-md-3">
-                              
+                                 <div class="well well-trans">
 <div class="wow fadeInRight" data-wow-delay="0.1s">
 <ul class="lead-list">
 					<div class="wow fadeInUp" data-wow-delay="0.2s">
-						<div class="box text-center">
+						<div class="panel-body">
 							
 						<?php
 // include database configuration file
