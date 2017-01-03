@@ -57,7 +57,16 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-         
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+			  <ul class="nav navbar-nav">
+				<li class="active"><a href="#intro">Home</a></li>
+				<li><a href="#service">Service</a></li>
+				<li><a href="#doctor">Doctors</a></li>
+				<li><a href="#facilities">Facilities</a></li>
+				<li><a href="#pricing">Pricing</a></li>
+				
+			  </ul>
+            </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
@@ -65,39 +74,37 @@
 	
 
 	<!-- Section: intro -->
-     <section id="intro" class="intro">
+    <section id="intro" class="intro">
 		<div class="intro-content">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6">
 					<div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-						<section id="boxes" class="home-section paddingtop-80">
-
+					<h2 class="h-ultra">Hemas medical group</h2>
+					</div>
+					
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3 col-md-3">
+                                 <div class="well well-trans">
 <div class="wow fadeInRight" data-wow-delay="0.1s">
-<div class="panel panel-skin">
-<div class="panel-heading">
-<h3 class="panel-title"><span class="fa fa-pencil-square-o">
-</span> Medicines Available In Stores </h3>
-</div>
-<div class="panel-body">
-						
-							<?php
+<ul class="lead-list">
+					<div class="wow fadeInUp" data-wow-delay="0.2s">
+						<div class="box text-center">
+							
+						<?php
 // include database configuration file
 include 'db_const.php';
-
 // initializ shopping cart class
 include 'Cart.php';
 $cart = new Cart;
-
 // redirect to home if cart is empty
 if($cart->total_items() <= 0){
     header("Location: index.php");
 }
-
 // set customer ID in session
 $_SESSION['sessCustomerID'] = 1;
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -162,9 +169,8 @@ $_Session['Prod_Id']=$item["PROD_ID"]
     </tfoot>
     </table>
 
-							
-							
-							
+							<h4 class="h-bold"><a href="#" onclick="toggle_visibility('foo');">Place Oder</h4>
+		
 
                                                </ul>	</ul>
 						</div>
@@ -183,14 +189,10 @@ $_Session['Prod_Id']=$item["PROD_ID"]
 						          
 							<div class="panel panel-skin">
 							<div class="panel-heading">
-									<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Place Your Order </h3>
+									<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Upload Your Priscription </h3>
 									</div>
 									<div class="panel-body">
-
-
-
-
-<script language="javascript">
+			<script language="javascript">
 function FillBilling(f) {
   if(f.billingtoo.checked == true) {
    
@@ -228,14 +230,20 @@ return false;
 </script>  
 
 
- 
+</head>
+
+
+
+
+
+<body> 
 
 
 
 <form name="form1" onsubmit="return validate()" method="POST" action="paybycash.php">
     	
 <div align="center">
-        
+        <h1 align="center">Billing Info</h1> 
 
  
  <table  width="500" height="500" border="0"  cellpadding="1px"  style="background-color: #6495ED">   
@@ -258,9 +266,7 @@ echo $_SESSION['Total'];?>" </td></tr>
 	</div>
 </div>
 </form>
-</body>
 
-</html>
 
 							</div>				
 						</div>
