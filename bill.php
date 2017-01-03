@@ -120,7 +120,7 @@ $_SESSION['sessCustomerID'] = 1;
 <body>
 <div class="container">
     <h1>Order Preview</h1>
-    <table border="0" class="table_fields"  id="tablepaging"cellpadding="2px" cellspacing="20px" width="600px">
+    <table border="0" class="table_fields"  id="tablepaging"cellpadding="2px" cellspacing="20px">
     <thead>
         <tr class="table_fields_top">
             <th>Product</th>
