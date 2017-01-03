@@ -681,7 +681,7 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
-    .container{padding: 50px;}
+    
     input[type="number"]{width: 20%;}
     
 table, th, td {
