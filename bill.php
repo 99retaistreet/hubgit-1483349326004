@@ -153,11 +153,11 @@ $_Session['Prod_Id']=$item["PROD_ID"]
 
     </tfoot>
     </table>
-</form>
+
 						</div>
 					</div></div></div></div>
 			
-		</div></div>			
+		</div></div>	</div><div>		
 
 						</div>
 						
