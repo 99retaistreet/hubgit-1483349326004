@@ -75,7 +75,7 @@
 					</div>
 					
 	
-		<div class="container">
+	
 			<div class="row">
 				<div class="col-sm-3 col-md-3">
                                  <div class="well well-trans">
@@ -109,7 +109,7 @@ $_SESSION['sessCustomerID'] = 1;
    
 
 
-    <h1>Order Preview</h1>
+    
     <table border="0" class="table_fields"  id="tablepaging"cellpadding="2px" cellspacing="20px">
     <thead>
         <tr class="table_fields_top">
@@ -158,7 +158,7 @@ $_Session['Prod_Id']=$item["PROD_ID"]
        
     
     
-    <td> <h4 class="h-bold"><a href="#" onclick="toggle_visibility('foo');">Place Order</h4</td>
+    <td> <h4 class="h-bold"><a href="#" onclick="toggle_visibility('foo');">Place Order</h4></td>
 </tr>
 
     </tfoot>
@@ -166,9 +166,7 @@ $_Session['Prod_Id']=$item["PROD_ID"]
 
 							
 							
-							<p>
-							Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
-							</p>
+							
 
                                                </ul>	</ul>
 						</div>
@@ -239,7 +237,7 @@ return false;
 <form name="form1" onsubmit="return validate()" method="POST" action="paybycash.php">
     	
 <div align="center">
-        <h1 align="center">Billing Info</h1> 
+        
 
  
  <table  width="500" height="500" border="0"  cellpadding="1px"  style="background-color: #6495ED">   
