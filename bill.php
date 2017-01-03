@@ -105,20 +105,10 @@ $_SESSION['sessCustomerID'] = 1;
 <html lang="en">
 <head>
     <title>Checkout - PHP Shopping Cart Tutorial</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-    .
-    .table{width: 65%;float: left;}
-    .shipAddr{width: 30%;float: left;margin-left: 30px;}
-    .footBtn{width: 95%;float: left;}
-    .orderBtn {float: right;}
-    </style>
-</head>
-<body>
-<div class="container">
+
+   
+
+
     <h1>Order Preview</h1>
     <table border="0" class="table_fields"  id="tablepaging"cellpadding="2px" cellspacing="20px">
     <thead>
