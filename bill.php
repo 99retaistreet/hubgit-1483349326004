@@ -78,11 +78,11 @@
 	
 			<div class="row">
 				<div class="col-sm-3 col-md-3">
-                                 <div class="well well-trans">
+                               
 <div class="wow fadeInRight" data-wow-delay="0.1s">
 <ul class="lead-list">
 					<div class="wow fadeInUp" data-wow-delay="0.2s">
-						<div class="box text-center">
+						
 							<?php
 // include database configuration file
 include 'db_const.php';
