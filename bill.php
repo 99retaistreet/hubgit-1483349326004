@@ -78,7 +78,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3 col-md-3">
-                                 <div class="well well-trans" style="width:500px;height:500px">
+                                 <div class="well well-trans" style="width:600px;height:500px">
 <div class="wow fadeInRight" data-wow-delay="0.1s">
 <ul class="lead-list">
 					<div class="wow fadeInUp" data-wow-delay="0.2s">
