@@ -65,7 +65,12 @@
 	
 
 	<!-- Section: intro -->
-    <div class="col-lg-6">
+     <section id="intro" class="intro">
+		<div class="intro-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+					<div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
 						<section id="boxes" class="home-section paddingtop-80">
 
 <div class="wow fadeInRight" data-wow-delay="0.1s">
