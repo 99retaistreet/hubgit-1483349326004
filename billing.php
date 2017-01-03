@@ -512,8 +512,7 @@ if($count == 3) {
  <a class="btnLink" href="javascript:void(0)?action=addToCart&PROD_ID=<?php echo $row["PROD_ID"]; ?>" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Add to cart</a></in>
                   </td></td>
 		
-        
- <a href="javascript:void(0)" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'"
+
 
         <?php 
         
@@ -640,36 +639,9 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
 ?>
    <title>Shopping Cart</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-    .container{padding: 50px;}
-    input[type="number"]{width: 20%;}
-    
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-th, td {
-    padding: 5px;
-    text-align: left;
-}
-table#t01 tr:nth-child(even) {
-    background-color: #eee;
-}
-table#t01 tr:nth-child(odd) {
-   background-color:#fff;
-}
-table#t01 th {
-    background-color: #87CEFA;
-    color: white;
-    
 
     
-}
-    </style>
+  
     <script>
     function updateCartItem(obj,PROD_ID){
         $.get("cartAction.php", {action:"updateCartItem", PROD_ID:PROD_ID, qty:obj.value}, function(data){
