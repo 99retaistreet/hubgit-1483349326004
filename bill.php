@@ -155,7 +155,7 @@ $_Session['Prod_Id']=$item["PROD_ID"]
     </table>
 
 						</div>
-					</div></div></div></div>
+					</div></div></div>
 			
 		</div></div>	</div><div>		
 
