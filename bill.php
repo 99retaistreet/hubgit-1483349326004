@@ -57,23 +57,7 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-			  <ul class="nav navbar-nav">
-				<li class="active"><a href="#intro">Home</a></li>
-				<li><a href="#service">Service</a></li>
-				<li><a href="#doctor">Doctors</a></li>
-				<li><a href="#facilities">Facilities</a></li>
-				<li><a href="#pricing">Pricing</a></li>
-				<li class="dropdown">
-				  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right">Extra</span>More <b class="caret"></b></a>
-				  <ul class="dropdown-menu">
-					<li><a href="index.html">Home form</a></li>
-					<li><a href="index-video.html">Home video</a></li>
-					<li><a href="index-cta.html">Home CTA</a></li>
-					<li><a href="https://bootstrapmade.com">Download</a></li>
-				  </ul>
-				</li>
-			  </ul>
+           
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -101,9 +85,10 @@
 					<div class="wow fadeInUp" data-wow-delay="0.2s">
 						<div class="box text-center">
 							
+	
 							
-							<h4 class="h-bold"><a href="#" onclick="toggle_visibility('foo');">Upload Your Priscription</h4>
-							<h1>Order Preview</h1>
+
+    <h1>Order Preview</h1>
     <table border="0" class="table_fields"  id="tablepaging"cellpadding="2px" cellspacing="20px" width="600px">
     <thead>
         <tr class="table_fields_top">
@@ -128,7 +113,8 @@ $_Session['Qty']=$item["qty"];
 $_Session['Subtotal']=$item["subtotal"];
 $_Session['Prod_Id']=$item["PROD_ID"]
 ?>
-        
+
+
        <tr class="table_fields_top">
             <td><?php echo $item["PROD_NM"]; ?></td>
             <td><?php echo 'Rs'.$item["price"].''; ?></td>
@@ -148,11 +134,13 @@ $_Session['Prod_Id']=$item["PROD_ID"]
             <td class="text-center"><strong>Total <?php echo 'Rs'.$cart->total().''; ?></strong></td>
             <?php } ?>
     
-        <a href="index.php">  Continue Shopping</a>
+ 
        
+
     
-    
-    <td> <a href="bill.php">Place Order</a></td>
+<td><input type="button" value="Place Order" id="btn_close" onclick="return close_window();" /></td>
+
+
 </tr>
 
     </tfoot>
