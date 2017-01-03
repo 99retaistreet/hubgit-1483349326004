@@ -229,9 +229,16 @@ $_Session['Prod_Id']=$item["PROD_ID"]
     
  
        
+    <script type="text/javascript">
+function close_window(){
+    window.opener.location = 'bill.php';
+    window.close();
+}
+</script>
     
-    
-    <td> <a href="bill.php">Place Order</a></td>
+    <form method="post" name="frm_2" id="frm_2">
+    <input type="submit" name="Place Order" id="btn_close" onclick="return close_window();" />
+</form>
 
 </tr>
 
