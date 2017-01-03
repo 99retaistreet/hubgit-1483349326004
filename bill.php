@@ -71,7 +71,7 @@
 				<div class="row">
 					<div class="col-lg-6">
 					<div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-					<h2 class="h-ultra">Hemas medical group</h2>
+					<h2 class="h-ultra">Order Review</h2>
 					</div>
 					
 	
@@ -98,8 +98,8 @@ $_SESSION['sessCustomerID'] = 1;
 ?>
 
 
-<div class="container">
-    <h1>Order Preview</h1>
+
+    
     <table border="0" class="table_fields"  id="tablepaging"cellpadding="2px" cellspacing="20px" width="100px">
     <thead>
         <tr class="table_fields_top">
@@ -132,7 +132,7 @@ $_Session['Prod_Id']=$item["PROD_ID"]
             <td><?php echo 'Rs'.$item["subtotal"].''; ?></td>
         </tr>
         <?php } }else{ ?>
-        <tr><td colspan="4"><p>No items in your cart......</p></td>
+        <tr><td colspan="2"><p>No items in your cart......</p></td>
         <?php } ?>
     </tbody>
     <tfoot>
