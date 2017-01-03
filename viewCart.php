@@ -178,6 +178,12 @@ table#t01 th {
 		
 
 </style>
+    <script type="text/javascript">
+function close_window(){
+    window.opener.location = 'bill.php';
+    window.close();
+}
+</script>
   <div id="light" class="white_content">
     
 
@@ -229,16 +235,10 @@ $_Session['Prod_Id']=$item["PROD_ID"]
     
  
        
-    <script type="text/javascript">
-function close_window(){
-    window.opener.location = 'bill.php';
-    window.close();
-}
-</script>
+
     
-    <form method="post" name="frm_2" id="frm_2">
-    <input type="submit" name="Place Order" id="btn_close" onclick="return close_window();" />
-</form>
+<td><input type="button" value="Place Order" id="btn_close" onclick="return close_window();" /></td>
+
 
 </tr>
 
