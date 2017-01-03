@@ -478,10 +478,83 @@ element.innerHTML = pagerHtml;
 
 }
 </script>
+<SCRIPT TYPE="text/javascript"> 
+function popup(mylink, windowname) 
+{
+	if (! window.focus)return true;
+	var href; if (typeof(mylink) == 'string') href=mylink; 
+	else href=mylink.href; 
+	window.open(href, windowname, 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=800,height=500'); 
+	return false; 
+	} 
+	</SCRIPT>
+
+
+<style>
 
 
 
 
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+</style>
 <table id="tablepaging" class="table_fields" cellspacing="5px" width="150px" >
   
         <?php
@@ -509,10 +582,11 @@ if($count == 3) {
                     	Rs<?php echo $row['MRP']?></big><br /><br />
                    
                  
- <a class="btnLink" href="javascript:void(0)?action=addToCart&PROD_ID=<?php echo $row["PROD_ID"]; ?>" onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Add to cart</a></in>
+ <a class="btnLink" href="?action=addToCart&PROD_ID=<?php echo $row["PROD_ID"]; ?>#popup1">Add to cart</a></in>
                   </td></td>
 		
-
+        
+ 
 
         <?php 
         
@@ -548,50 +622,13 @@ pager.showPage(1);
 
     </div>
 </div>
-    <style>
-
-.black_overlay {
-  display: none;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  z-index: 1001;
-  -moz-opacity: 0.8;
-  opacity: .80;
-  filter: alpha(opacity=80);
-}
-.white_content {
- display: none;
-  position: absolute;
-  top: 25%;
-  left: 25%;
-  width: 75%;
-  height: 75%;
-  padding: 16px;
-  border: 16px solid blue;
-  background-color: white;
-  z-index: 1002;
-  overflow: auto;
-	-webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-}
-	
-@keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-}
-		
-
-</style>
-  <div id="light" class="white_content">
     
-
-<?php
+<div id="popup1" class="overlay">
+	<div class="popup">
+		
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<?php
 // initializ shopping cart class
 include 'Cart.php';
 $cart = new Cart;
@@ -644,7 +681,7 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
-    
+    .container{padding: 50px;}
     input[type="number"]{width: 20%;}
     
 table, th, td {
@@ -729,7 +766,10 @@ table#t01 th {
     </tfoot>
     </table>
 </div>
+		</div>
+	</div>
 </div>
+
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 
 	<!-- Core JavaScript Files -->
