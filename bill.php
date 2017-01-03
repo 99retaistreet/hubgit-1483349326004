@@ -66,12 +66,15 @@
 
 	<!-- Section: intro -->
     <div class="col-lg-6">
-						<div class="form-wrapper">
-						<div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
-						          
-							
-									<div class="panel-body">
-					<div class="wow fadeInUp" data-wow-delay="0.2s">
+						<section id="boxes" class="home-section paddingtop-80">
+
+<div class="wow fadeInRight" data-wow-delay="0.1s">
+<div class="panel panel-skin">
+<div class="panel-heading">
+<h3 class="panel-title"><span class="fa fa-pencil-square-o">
+</span> Medicines Available In Stores </h3>
+</div>
+<div class="panel-body">
 						
 							<?php
 // include database configuration file
