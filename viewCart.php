@@ -161,7 +161,8 @@ table#t01 th {
   width: 75%;
   height: 75%;
   padding: 16px;
-  border: 16px 	deepskyblue;
+  border: 16px ;	
+   border-color:deepskyblue;
   background-color: white;
   z-index: 1002;
   overflow: auto;
