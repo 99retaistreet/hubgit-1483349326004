@@ -71,7 +71,7 @@
 				<div class="row">
 					<div class="col-lg-6">
 					<div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-					<h2 class="h-ultra">Order Review</h2>
+					<h2 class="h-ultra">Pierson Medical Shop</h2>
 					</div>
 					
 	
@@ -137,7 +137,7 @@ $_Session['Prod_Id']=$item["PROD_ID"]
     </tbody>
     <tfoot>
         <tr>
-            <td colspan="4"></td>
+            <td colspan="2"></td>
             <?php if($cart->total_items() > 0){
             	$_SESSION['Total']=$cart->total();
             	?>
