@@ -83,23 +83,18 @@
 <ul class="lead-list">
 					<div class="wow fadeInUp" data-wow-delay="0.2s">
 		
-							<?php
+														<?php
 // include database configuration file
 include 'db_const.php';
-
 // initializ shopping cart class
 include 'Cart.php';
 $cart = new Cart;
-
 // redirect to home if cart is empty
 if($cart->total_items() <= 0){
     header("Location: index.php");
 }
-
 // set customer ID in session
 $_SESSION['sessCustomerID'] = 1;
-
-
 ?>
 
 
@@ -158,10 +153,11 @@ $_Session['Prod_Id']=$item["PROD_ID"]
 
     </tfoot>
     </table>
+</form>
 						</div>
 					</div></div></div></div>
 			
-					
+		</div></div>			
 
 						</div>
 						
@@ -309,6 +305,4 @@ echo $_SESSION['Total'];?>" </td></tr>
 </script>
 </body>
 
-</html>
-</body>
 </html>
