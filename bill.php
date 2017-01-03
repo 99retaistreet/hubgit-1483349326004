@@ -137,7 +137,7 @@ $_Session['Prod_Id']=$item["PROD_ID"]
     </tbody>
     <tfoot>
         <tr>
-            <td colspan="3"></td>
+            <td colspan="4"></td>
             <?php if($cart->total_items() > 0){
             	$_SESSION['Total']=$cart->total();
             	?>
