@@ -18,9 +18,4 @@ Uploaded File:<br>
 <img src="images/<?php echo $_FILES["file"]["name"]; ?>" alt="Image path Invalid" >
 <?php
 }
-
-else
-{
-echo "Invalid file detail ::<br> file type ::".$_FILES["file"]["type"]." , file size::: ".$_FILES["file"]["size"];
-}
 ?>
