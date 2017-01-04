@@ -120,11 +120,11 @@ $imageData = base64_encode(file_get_contents($_FILES["file"]["tmp_name"]));
 // Format the image SRC:  data:{mime};base64,{data};
 
 
-   $src = 'data:;base64,'.$imageData;
+   
 $_SESSION['fil'] = "$src";
 
   
- echo '<hr />Image File Uploaded : <br /><img src="'.$src.'" style="width:100%;" />';
+ echo '<hr />Image File Uploaded : <br /><img src="'.$imageData.'" style="width:100%;" />';
 ?>
 
 										</div>
