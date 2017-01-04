@@ -31,7 +31,7 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 
-<div id="wrapper">
+<div id="wrapper">  
 	
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
 		<div class="top-area">
