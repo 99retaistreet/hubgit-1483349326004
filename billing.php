@@ -157,7 +157,20 @@ echo "Invalid file detail ::<br> file type ::".$_FILES["file"]["type"]." , file 
     </section>
 	
 	<!-- /Section: intro -->
-
+<script>
+	$(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.substr(1) +']');
+        if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    });
+});
+	</script>
 	<!-- Section: boxes -->
    
 	
@@ -171,7 +184,7 @@ echo "Invalid file detail ::<br> file type ::".$_FILES["file"]["type"]." , file 
 <div class="box text-center">
 							
 <i class="fa fa-check fa-3x circled bg-skin"></i>
-<h4 class="h-bold"><a href="#" onclick="toggle_visibility('foo1');">Want to Add Some More Medicines</h4></a>
+<h4 class="h-bold"><a href="#section1" onclick="toggle_visibility('foo1');">Want to Add Some More Medicines</h4></a>
 <p>
 Add some more medicines beyond your priscription 
 </p>
@@ -310,7 +323,7 @@ echo $_SESSION['Total'];?>" </td></tr>
 		
 
 	</section></div>
-	
+	<div id="section1">
 	<div id="foo1" class="wow fadeInDown" style="display:none;">
 <section id="boxes" class="home-section paddingtop-80">
 
@@ -576,7 +589,7 @@ pager.showPage(1);
 
     </div>
 </div>
-    
+<>    
 
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 
