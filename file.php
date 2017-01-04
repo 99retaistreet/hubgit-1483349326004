@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">   
 
-    <title>Medicio landing page template for Health niche</title>
+    <title>99 Retail Pvt Ltd</title>
 	
     <!-- css -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -119,7 +119,7 @@
 									<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Upload Your Priscription </h3>
 									</div>
 									<div class="panel-body">
-			<form action="upload.php" method="POST" enctype="multipart/form-data">
+			<form action="billing.php" method="POST" enctype="multipart/form-data">
 	            	<input type="file" name="file" /><br>
 	            	<input type="submit" class="btn" value="Upload">
 	          	</form>
