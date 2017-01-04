@@ -119,7 +119,7 @@ $imageData = base64_encode(file_get_contents($_FILES["file"]["tmp_name"]));
 
 // Format the image SRC:  data:{mime};base64,{data};
 $file_name=$_FILES['file']['name'];
-	echo "<img src= .$file_name. " height=200 width=300 />";
+	echo "<img src= .$file_name.  height=200 width=300 />";
 
    
 $_SESSION['fil'] = "$src";
