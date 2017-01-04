@@ -57,16 +57,7 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-			  <ul class="nav navbar-nav">
-				<li class="active"><a href="#intro">Home</a></li>
-				<li><a href="#service">Service</a></li>
-				<li><a href="#doctor">Doctors</a></li>
-				<li><a href="#facilities">Facilities</a></li>
-				<li><a href="#pricing">Pricing</a></li>
-				
-			  </ul>
-            </div>
+            
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
@@ -119,7 +110,7 @@
 									<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Upload Your Priscription </h3>
 									</div>
 									<div class="panel-body">
-			<form action="billing.php" method="POST" enctype="multipart/form-data">
+			<form action="upload.php" method="POST" enctype="multipart/form-data">
 	            	<input type="file" name="file" /><br>
 	            	<input type="submit" class="btn" value="Upload">
 	          	</form>
