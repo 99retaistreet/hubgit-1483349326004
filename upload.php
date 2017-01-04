@@ -1,9 +1,4 @@
 <?php
-if ((($_FILES["file"]["type"] == "image/gif")
-|| ($_FILES["file"]["type"] == "image/jpeg")
-|| ($_FILES["file"]["type"] == "image/pjpeg"))
-&& ($_FILES["file"]["type"]== "image/png"))
-{
 
 //echo "Upload File Name: " . $_FILES["file"]["name"] . "<br />";
 //echo "File Type: " . $_FILES["file"]["type"] . "<br />";
@@ -16,6 +11,3 @@ echo "Stored in: " . "images/" . $_FILES["file"]["name"]."<br />";
 ?>
 Uploaded File:<br>
 <img src="images/<?php echo $_FILES["file"]["name"]; ?>" alt="Image path Invalid" >
-<?php
-}
-?>
