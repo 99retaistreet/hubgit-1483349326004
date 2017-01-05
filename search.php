@@ -3,7 +3,7 @@
  include 'db_const.php';
 // Search from MySQL database table
 $search=$_POST['search'];
-$stmt = "select * from RETAIL_STORE_PROD where PROD_NM LIKE '%$search%' and STORE_ID='1472222821'  LIMIT 0 , 10");
+$stmt = "select * from RETAIL_STORE_PROD where PROD_NM LIKE '%$search%' and STORE_ID='1472222821'  LIMIT 0 , 10";
  $result = db2_prepare($conn, $stmt);
        db2_execute($result);
 // Display search result
