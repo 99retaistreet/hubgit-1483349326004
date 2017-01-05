@@ -6,9 +6,9 @@ include 'Cart.php';
 $cart = new Cart; 
 include 'db_const.php';
 if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
-    if($_REQUEST['action'] == 'addToCart' && !empty($_REQUEST['PROD_ID']) && !empty($_REQUEST['quantity'])){
+    if($_REQUEST['action'] == 'addToCart' && !empty($_REQUEST['PROD_ID'])){
         $productID = $_REQUEST['PROD_ID'];
-	    $quantity =$_REQUEST['quantiy'];
+	    
         // get product details
         $stmt = "SELECT * FROM RETAIL_STORE_PROD WHERE PROD_ID = '$productID'";
           $result = db2_prepare($conn, $stmt);
