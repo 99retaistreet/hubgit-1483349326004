@@ -33,7 +33,7 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
         $updateItem = $cart->update($itemData);
         echo $updateItem?'ok':'err';die;
     }elseif($_REQUEST['action'] == 'removeCartItem' && !empty($_REQUEST['PROD_ID'])){
-        $deleteItem = $cart->remove($_REQUEST['PROD_ID']);
+        $deleteItem = $cart->remove($_REQUEST['PROD_ID']); 
         header("Location: viewCart.php");
     }elseif($_REQUEST['action'] == 'placeOrder' && $cart->total_items() > 0 && !empty($_SESSION['sessCustomerID'])){
         // insert order details into database
