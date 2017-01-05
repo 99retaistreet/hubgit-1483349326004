@@ -547,9 +547,9 @@ if($count == 3) {
             		
                     Price:<big style="color:green">
                     	Rs<?php echo $row['MRP']?></big><br /><br />
-               <input type="number" name="quantity" min="1" max="99"><br/><br/>                   
-                 
- <a class="btnLink" href="viewCart.php?action=addToCart&PROD_ID=<?php echo $row["PROD_ID"]; ?>" onClick="return popup(this, 'notes')">Add to cart</a></in>
+               <input type="number" name="quantity" id="quantity" min="1" max="99"><br/><br/>                   
+                
+ <a class="btnLink" href="viewCart.php?action=addToCart&PROD_ID=<?php echo $row["PROD_ID"]; ?>&quantity = <?php echo $data['quantity'] ?>" onClick="return popup(this, 'notes')">Add to cart</a></in>
                   </td></td>
 		
         
