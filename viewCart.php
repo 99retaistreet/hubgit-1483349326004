@@ -89,7 +89,7 @@ table#t01 th {
         });
     }
     </script>
-</head>
+
 <body>
 <div class="container">
     <h1>Shopping Cart</h1>
@@ -114,7 +114,7 @@ table#t01 th {
             <td><?php echo $item["PROD_NM"]; ?></td>
             <td><?php echo 'Rs'.$item["MRP"].' '; ?></td>
            
-            <td><input type="number" class="form-control text-center" value="<?php echo $item["qty"]; ?>" onchange="updateCartItem(this, '<?php echo $item["rowid"]; ?>')"></td>
+            <td><input type="number" class="" value="<?php echo $item["qty"]; ?>" onchange="updateCartItem(this, '<?php echo $item["rowid"]; ?>')"></td>
             <td><?php echo 'Rs'.$item["subtotal"].''; ?></td>
             <td>
                 <!--<a href="cartAction.php?action=updateCartItem&id=" class="btn btn-info"><i class="glyphicon glyphicon-refresh"></i></a>-->
