@@ -1,58 +1,26 @@
-<?php
-    $key=$_GET['key'];
-    $array = array();
-   
-	
-if( getenv("VCAP_SERVICES") ) {
-    $json = getenv("VCAP_SERVICES");
-} 
-# No DB credentials
-else {
-    echo "No vcap services available.";
-    return;
-}
-# Decode JSON and gather DB Info
-$services_json = json_decode($json,true);
-$blu = $services_json["dashDB"];
-if (empty($blu)) {
-    echo "No dashDB service instance is bound. Please bind a dashDB service instance";
-    return;
-}
-$bludb_config = $services_json["dashDB"][0]["credentials"];
-// create DB connect string
-$database = 'BLUDB';
-$user = 'dash111138';
-$password = 'iCju8bMumIfF';
-$hostname = 'awh-yp-small02.services.dal.bluemix.net';
-$port = 50000;
-$conn_string = "DRIVER={IBM DB2 ODBC DRIVER};DATABASE=$database;" .
-  "HOSTNAME=$hostname;PORT=$port;PROTOCOL=TCPIP;UID=$user;PWD=$password;";
-$conn = db2_connect($conn_string, '', '');
-	
-	
-	
-	
-           
-      
-                
-    $query="select * from RETAIL_STORE_PROD where PROD_NM LIKE '%{$key}%'and STORE_ID='1472222821'";
- $result = db2_prepare($conn, $query);
+<?php 
+//load database connection
+ include 'db_const.php';
+// Search from MySQL database table
+$search=$_POST['search'];
+$stmt = "select * from RETAIL_STORE_PROD where PROD_NM LIKE '%$search%' and STORE_ID='1472222821'  LIMIT 0 , 10");
+ $result = db2_prepare($conn, $stmt);
        db2_execute($result);
-    while($row=mysql_fetch_assoc($result))
-    {
-        ?>
-    
-     <td><b><?php echo $row['PROD_NM']?></b><br /><br />
-            		
-                    Price:<big style="color:green">
-                    	Rs<?php echo $row['MRP']?></big><br /><br />
-                   
-                 
- <a class="btnLink" href="?action=addToCart&PROD_ID=<?php echo $row["PROD_ID"]; ?>" onClick="return popup(this, 'notes')">Add to cart</a></in>
-                
-    <?php
-    
-    }
-    ?>
-   
-
+// Display search result
+         if (!db2_num_rows == 0) {
+		 		echo "Search found :<br/>";
+				echo "<table style=\"font-family:arial;color:#333333;\">";	
+                echo "<tr><td style=\"border-style:solid;border-width:1px;border-color:#98bf21;background:#98bf21;\">Title Books</td><td style=\"border-style:solid;border-width:1px;border-color:#98bf21;background:#98bf21;\">Author</td><td style=\"border-style:solid;border-width:1px;border-color:#98bf21;background:#98bf21;\">Price</td></tr>";				
+            while ($results = $query->fetch()) {
+				echo "<tr><td style=\"border-style:solid;border-width:1px;border-color:#98bf21;\">";			
+                echo $results['PROD_NM'];
+				echo "</td><td style=\"border-style:solid;border-width:1px;border-color:#98bf21;\">";
+                echo $results['MRP'];
+				
+				echo "</td></tr>";				
+            }
+				echo "</table>";		
+        } else {
+            echo 'Nothing found';
+        }
+?>
