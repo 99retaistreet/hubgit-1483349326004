@@ -21,9 +21,9 @@ $bludb_config = $services_json["dashDB"][0]["credentials"];
 
 // create DB connect string
 $database = 'BLUDB';
-$user = 'dash107813';
-$password = 'MxX8ewhhVg7f';
-$hostname = 'awh-yp-small03.services.dal.bluemix.net';
+$user = 'dash111138';
+$password = 'iCju8bMumIfF';
+$hostname = 'awh-yp-small02.services.dal.bluemix.net';
 $port = 50000;
 $conn_string = "DRIVER={IBM DB2 ODBC DRIVER};DATABASE=$database;" .
   "HOSTNAME=$hostname;PORT=$port;PROTOCOL=TCPIP;UID=$user;PWD=$password;";
