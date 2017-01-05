@@ -19,7 +19,7 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
             'PROD_ID' => $row['PROD_ID'],
             'PROD_NM' => $row['PROD_NM'],
             'MRP' => $row['MRP'],
-            'qty' => $quantity
+            'qty' => 1
         );
         
         $insertItem = $cart->insert($itemData);
