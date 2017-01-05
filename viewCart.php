@@ -6,8 +6,9 @@ include 'Cart.php';
 $cart = new Cart;
 include 'db_const.php';
 if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
-    if($_REQUEST['action'] == 'addToCart' && !empty($_REQUEST['PROD_ID'])){
+    if($_REQUEST['action'] == 'addToCart' && !empty($_REQUEST['PROD_ID']) && !empty($_REQUEST['quantity'])){
         $productID = $_REQUEST['PROD_ID'];
+	    $quantity =$_REQUEST['quantiy'];
         // get product details
         $stmt = "SELECT * FROM RETAIL_STORE_PROD WHERE PROD_ID = '$productID'";
           $result = db2_prepare($conn, $stmt);
@@ -18,7 +19,7 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
             'PROD_ID' => $row['PROD_ID'],
             'PROD_NM' => $row['PROD_NM'],
             'MRP' => $row['MRP'],
-            'qty' => 1
+            'qty' => $quantity
         );
         
         $insertItem = $cart->insert($itemData);
