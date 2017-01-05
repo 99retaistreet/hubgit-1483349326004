@@ -3,7 +3,7 @@
 <?php
 // initializ shopping cart class
 include 'Cart.php';
-$cart = new Cart;
+$cart = new Cart; 
 include 'db_const.php';
 if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
     if($_REQUEST['action'] == 'addToCart' && !empty($_REQUEST['PROD_ID']) && !empty($_REQUEST['quantity'])){
