@@ -1,26 +1,75 @@
-<?php 
-//load database connection
- include 'db_const.php';
-// Search from MySQL database table
-$search=$_POST['search'];
-$stmt = "select * from RETAIL_STORE_PROD where PROD_NM LIKE '%$search%' and STORE_ID='1472222821'  LIMIT 0 , 10";
- $result = db2_prepare($conn, $stmt);
-       db2_execute($result);
-// Display search result
-         if (!db2_num_rows == 0) {
-		 		echo "Search found :<br/>";
-				echo "<table style=\"font-family:arial;color:#333333;\">";	
-                echo "<tr><td style=\"border-style:solid;border-width:1px;border-color:#98bf21;background:#98bf21;\">Products</td><td style=\"border-style:solid;border-width:1px;border-color:#98bf21;background:#98bf21;\">Price</td></tr>";				
-            while ($results = $query->fetch()) {
-				echo "<tr><td style=\"border-style:solid;border-width:1px;border-color:#98bf21;\">";			
-                echo $results['PROD_NM'];
-				echo "</td><td style=\"border-style:solid;border-width:1px;border-color:#98bf21;\">";
-                echo $results['MRP'];
-				
-				echo "</td></tr>";				
-            }
-				echo "</table>";		
-        } else {
-            echo 'Nothing found';
+<!doctype html>
+<html>
+<head>
+
+    <title>How to hide/show an element using jQuery show/hide effects</title>
+    
+    <style>
+        body{
+            text-align: center;
         }
-?>
+        
+        input{
+            margin-top:20px;
+            font-size:16px;
+            font-weight: bold;
+            padding:5px 10px;
+        }
+
+        #box{
+            margin:50px auto;
+            width:500px;
+            height:100px;
+            color:#fff;
+            padding:10px;
+            background: orange;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <input type="button" value="Hide Box" class="button-hide" />
+    <input type="button" value="Show Box" class="button-show"  />
+    
+    <div id="box">Box</div>
+
+    <!-- 
+        We use Google's CDN to serve the jQuery js libs. 
+        To speed up the page load we put these scripts at the bottom of the page 
+    -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+    <script>
+
+        //DOM loaded 
+        $(document).ready(function() {
+            
+            //attach click event to buttons
+            $('.button-show').click(function(){
+                
+                /**
+                 * when show button is clicked we call the show plugin
+                 * which scales the box to default size
+                 * You can try other effects from here: http://jqueryui.com/effect/
+                 */
+                $("#box").show("scale", 500); 
+
+            });
+
+            $('.button-hide').click(function(){
+
+                //same thing happens except in this case we hide the element
+                $("#box").hide("scale", 500); 
+
+            });
+        });
+
+       
+
+    </script>
+
+</body>
+</html>
