@@ -56,7 +56,7 @@
                 </a>
             </div>
 
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+           <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
 <ul class="nav navbar-nav">
 
 <li class="dropdown">
@@ -64,14 +64,16 @@
 </b>
 </a>
 <ul class="dropdown-menu">
-<li><a href="index.html">LogOut</a></li>
+<li><a href="index.html">Logout</a></li>
 
 </ul>
 </li>
 </ul>
 </div>
 <!-- /.navbar-collapse -->
- </div><!-- Collect the nav links, forms, and other content for toggling -->
+ </div>
+ <!-- /.container -->
+  </nav>
             
             <!-- /.navbar-collapse -->
      
