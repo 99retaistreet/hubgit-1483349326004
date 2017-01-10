@@ -78,7 +78,7 @@ while ($row = db2_fetch_assoc($stmt)) {
      
      $name="<b>".$row['NAME'] ."</b>";
     echo"<b>";
-    echo "Hello $Name";
+    echo "Hello $name";
     echo "</b>";
 }
 ?></li>
