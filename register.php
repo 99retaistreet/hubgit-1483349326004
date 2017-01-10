@@ -83,10 +83,8 @@
 </b>
 </a>
 <ul class="dropdown-menu">
-<li><a href="index.html">Home form</a></li>
-<li><a href="index-video.html">Home video</a></li>
-<li><a href="index-cta.html">Home CTA</a></li>
-<li><a href="https://bootstrapmade.com">Download</a></li>
+<li><a href="index.html">LogOut</a></li>
+
 </ul>
 </li>
 </ul>
