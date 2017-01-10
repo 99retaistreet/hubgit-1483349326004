@@ -6,10 +6,10 @@ SESSION_START();
 
 	$CUST_ID=$_SESSION['CUST_id'];
 
-echo 'mobileno'; echo$Mobile_No;
-echo 'cust_id'; echo $CUST_ID;
+mobileno echo $Mobile_No;
+cust_id echo $CUST_ID;
 
-$sql = "SELECT * FROM RETAIL_CUST  where MOBILE_NO='$Mobile_No' and CUST_ID='$CUST_ID' LIMIT 1 ";
+$sql = "SELECT * FROM RETAIL_CUST  where CUST_ID='$CUST_ID' LIMIT 1 ";
 $stmt = db2_prepare($conn, $sql);
 $result = db2_execute($stmt);
 while ($row = db2_fetch_assoc($stmt)) {
