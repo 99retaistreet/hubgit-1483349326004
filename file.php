@@ -58,7 +58,10 @@
 
            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
 
-<?php
+
+	<ul class="nav navbar-nav">
+		<li class="active">
+			<?php
 include 'db_const.php';
 SESSION_START();
 
@@ -75,8 +78,7 @@ while ($row = db2_fetch_assoc($stmt)) {
      
     echo    $row['NAME'];
 }
-?>
-	<ul class="nav navbar-nav">
+?></li>
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret">
 </b>
