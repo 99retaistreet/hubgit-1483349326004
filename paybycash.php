@@ -7,12 +7,10 @@ include 'Cart.php';
 $cart = new Cart;
 
 // redirect to home if cart is empty
-if($cart->total_items() <= 0){
-    header("Location: index.php");
-}
+
 
 // set customer ID in session
-$_SESSION['sessCustomerID'] = 1;
+
 
 
 ?>
@@ -139,7 +137,11 @@ if (!db2_execute($stmt)) {
 }
 
 ?>
-
+<tr><th>Name:</th><td><?php echo $name; ?></td></tr>
+<tr><th>Mobile_NO:</th><td><?php echo $Mobile_No; ?></td></tr>
+<tr><th>E_Mail:</th><td><?php echo $E_mail; ?></td></tr>
+<tr><th>ShippingAddress:</th><td><?php echo $ShippingAddress; ?></td></tr>
+<tr><th>BillingAddress:</th><td><?php echo $BillingAddress; ?></td></tr> 
 
 <td><?php echo $Order_Id; ?></td>
             <td><?php echo $item["PROD_NM"]; ?></td>
@@ -170,11 +172,7 @@ if (!db2_execute($result)) {
     </tr>
 
     </tfoot>
-    <tr><th>Name:</th><td><?php echo $name; ?></td></tr>
-<tr><th>Mobile_NO:</th><td><?php echo $Mobile_No; ?></td></tr>
-<tr><th>E_Mail:</th><td><?php echo $E_mail; ?></td></tr>
-<tr><th>ShippingAddress:</th><td><?php echo $ShippingAddress; ?></td></tr>
-<tr><th>BillingAddress:</th><td><?php echo $BillingAddress; ?></td></tr> 
+   
     </table>
 </body>
 </html>
