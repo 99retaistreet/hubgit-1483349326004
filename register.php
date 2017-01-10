@@ -75,24 +75,9 @@
  </div>
 
 <!-- Collect the nav links, forms, and other content for toggling -->
-<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-<ul class="nav navbar-nav">
 
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right">Extra</span>More <b class="caret">
-</b>
-</a>
-<ul class="dropdown-menu">
-<li><a href="index.html">LogOut</a></li>
-
-</ul>
-</li>
-</ul>
-</div>
-<!-- /.navbar-collapse -->
- </div>
  <!-- /.container -->
-  </nav>
+  
 	
 
 	<!-- Section: intro -->
