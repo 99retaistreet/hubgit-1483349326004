@@ -58,7 +58,24 @@
 
            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
 <ul class="nav navbar-nav">
+<?php
+include 'db_const.php';
+SESSION_START();
 
+  $Mobile_No=$_SESSION['Mobile_No'];
+
+	$CUST_ID=$_SESSION['CUST_id'];
+
+
+
+$sql = "SELECT * FROM RETAIL_CUST  where CUST_ID='$CUST_ID' LIMIT 1 ";
+$stmt = db2_prepare($conn, $sql);
+$result = db2_execute($stmt);
+while ($row = db2_fetch_assoc($stmt)) {
+     
+    echo    $row['NAME'];
+}
+?>
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right">Extra</span>More <b class="caret">
 </b>
