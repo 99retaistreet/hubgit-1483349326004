@@ -81,7 +81,17 @@ tfoot tr th:last-child {
 <h1>Order Summary</h1>
 <div class="container">
 
- 
+       <?php
+        session_start();
+  
+  //-------sending customer information-----------//
+  
+$name=$_POST['name'];
+$Mobile_No =$_POST['mobile_no'];
+$E_mail =$_POST['e_mail'];
+$ShippingAddress =$_POST['shippingaddress'];
+$BillingAddress =$_POST['billingaddress'];
+    ?>
    <table>
 <tr><th>Name:</th><td><?php echo $name; ?></td></tr>
 <tr><th>Mobile_NO:</th><td><?php echo $Mobile_No; ?></td></tr>
