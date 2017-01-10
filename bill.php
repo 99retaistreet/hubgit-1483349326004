@@ -210,7 +210,7 @@ echo $_SESSION['Total'];?>" </td></tr>
 
 	<!-- Section: boxes -->
     <
-	</footer>
+	
 
 </div>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
@@ -244,5 +244,7 @@ echo $_SESSION['Total'];?>" </td></tr>
 //-->
 </script>
 </body>
+<?php
+require("footer.php");
+?>
 
-</html>
