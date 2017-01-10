@@ -76,7 +76,7 @@ $stmt = db2_prepare($conn, $sql);
 $result = db2_execute($stmt);
 while ($row = db2_fetch_assoc($stmt)) {
      
-    echo    $row['NAME'];
+    echo "<b>".$row['NAME'] ."</b>";
 }
 ?></li>
 <li class="dropdown">
