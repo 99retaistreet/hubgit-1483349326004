@@ -83,7 +83,11 @@ tfoot tr th:last-child {
 
  
    <table>
-  
+<tr><th>Name:</th><td><?php echo $name; ?></td></tr>
+<tr><th>Mobile_NO:</th><td><?php echo $Mobile_No; ?></td></tr>
+<tr><th>E_Mail:</th><td><?php echo $E_mail; ?></td></tr>
+<tr><th>ShippingAddress:</th><td><?php echo $ShippingAddress; ?></td></tr>
+<tr><th>BillingAddress:</th><td><?php echo $BillingAddress; ?></td></tr>   
   <thead>
    <tr class="table_fields_top">
             <th>ORDER_ID</th>
@@ -137,11 +141,7 @@ if (!db2_execute($stmt)) {
 }
 
 ?>
-<tr><th>Name:</th><td><?php echo $name; ?></td></tr>
-<tr><th>Mobile_NO:</th><td><?php echo $Mobile_No; ?></td></tr>
-<tr><th>E_Mail:</th><td><?php echo $E_mail; ?></td></tr>
-<tr><th>ShippingAddress:</th><td><?php echo $ShippingAddress; ?></td></tr>
-<tr><th>BillingAddress:</th><td><?php echo $BillingAddress; ?></td></tr> 
+
 
 <td><?php echo $Order_Id; ?></td>
             <td><?php echo $item["PROD_NM"]; ?></td>
