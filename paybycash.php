@@ -92,11 +92,13 @@ $E_mail =$_POST['e_mail'];
 $ShippingAddress =$_POST['shippingaddress'];
 $BillingAddress =$_POST['billingaddress'];
     ?>
+    <table>
     <tr><th>Name:</th><td><?php echo $name; ?></td></tr>
 <tr><th>Mobile_NO:</th><td><?php echo $Mobile_No; ?></td></tr>
 <tr><th>E_Mail:</th><td><?php echo $E_mail; ?></td></tr>
 <tr><th>ShippingAddress:</th><td><?php echo $ShippingAddress; ?></td></tr>
 <tr><th>BillingAddress:</th><td><?php echo $BillingAddress; ?></td></tr>
+     
    <table>
   
   <thead>
@@ -174,7 +176,7 @@ if (!db2_execute($result)) {
     </tr>
 
     </tfoot>
-   
+   </table>
     </table>
 </body>
 </html>
