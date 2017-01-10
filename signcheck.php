@@ -227,7 +227,7 @@ $sql = "SELECT * from RETAIL_CUST where MOBILE_NO='$Mobile_No' and PASSWORD='$pa
                  Session_start();
            // var_dump($_POST); 
                $_Session['Mobile_No']=  $_POST['Mobile_No'];
-           echo "<script type='text/javascript'>window.location.href = 'file.php';</script>";
+           echo "<script type='text/javascript'>window.location.href = 'checkdata.php';</script>";
            
 		echo "<p>Logged in successfully</p>";
                
