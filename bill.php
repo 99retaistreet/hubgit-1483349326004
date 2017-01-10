@@ -155,7 +155,7 @@ return false;
 </script>  
 
 
-</head>
+
 
 
 
@@ -194,7 +194,7 @@ echo $_SESSION['Total'];?>" </td></tr>
 	
 	<!-- progress bar -->
 							
-									</form>
+									
 								</div>
 							</div>				
 						</div>
@@ -213,6 +213,7 @@ echo $_SESSION['Total'];?>" </td></tr>
 	
 
 </div>
+</body>
 <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
 
 	<!-- Core JavaScript Files -->
@@ -243,8 +244,9 @@ echo $_SESSION['Total'];?>" </td></tr>
 }
 //-->
 </script>
-</body>
+
 <?php
 require("footer.php");
 ?>
+</html>
 
