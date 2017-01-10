@@ -119,13 +119,96 @@
 <div class="panel-heading">
 <h3 class="panel-title"><span class="fa fa-pencil-square-o"></span>REGISTER HERE <small>(It's free!)</small></h3>
 </div>
+<script type="text/javascript">
+
+function checkname()
+{
+ var name=document.getElementById( "mobile_no" ).value;
+	
+ if(name)
+ {
+  $.ajax({
+  type: 'post',
+  url: 'checkdata.php',
+  data: {
+   user_name:name,
+  },
+  success: function (response) {
+   $( '#name_status' ).html(response);
+   if(response=="OK")	
+   {
+    return true;	
+   }
+   else
+   {
+    return false;	
+   }
+  }
+  });
+ }
+ else
+ {
+  $( '#name_status' ).html("");
+  return false;
+ }
+}
+
+function checkemail()
+{
+ var email=document.getElementById( "e_mail" ).value;
+	
+ if(email)
+ {
+  $.ajax({
+  type: 'post',
+  url: 'checkdata.php',
+  data: {
+   user_email:email,
+  },
+  success: function (response) {
+   $( '#email_status' ).html(response);
+   if(response=="OK")	
+   {
+    return true;	
+   }
+   else
+   {
+    return false;	
+   }
+  }
+  });
+ }
+ else
+ {
+  $( '#email_status' ).html("");
+  return false;
+ }
+}
+
+function checkall()
+{
+ var namehtml=document.getElementById("name_status").innerHTML;
+ var emailhtml=document.getElementById("email_status").innerHTML;
+
+ if((namehtml && emailhtml)=="OK")
+ {
+  return true;
+ }
+ else
+ {
+  return false;
+ }
+}
+
+</script>
 <div class="panel-body">
-<form role="form" action="code_exec.php" class="lead" method="post">
+<form role="form" action="code_exec.php" class="lead" method="post" onsubmit="return checkall();>
 <div class="row">
 <div class="col-xs-6 col-sm-6 col-md-6">
 <div class="form-group">
 <label>Mobile_no</label>
-<input type="text" ID="tbNumbers" name="mobile_no"class="form-control input-md" required maxlength="10" onkeypress="javascript:return isNumber(event)"/>
+<input type="text" ID="tbNumbers" name="mobile_no"class="form-control input-md" required maxlength="10" onkeypress="javascript:return isNumber(event)" onkeyup="checkname();"/>
+<span id="name_status"></span>
 </div>
 </div>
 <div class="col-xs-6 col-sm-6 col-md-6">
@@ -142,7 +225,8 @@
 <div class="form-group">
 <label>Email</label>
 
-<input type="text" name="e_mail" id="email" class="form-control input-md" E_MAIL required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
+<input type="text" name="e_mail" id="email" class="form-control input-md" E_MAIL required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" onkeyup="checkemail();"/>
+ <span id="email_status"></span>
 </div>
 </div>
 <div class="col-xs-6 col-sm-6 col-md-6">
