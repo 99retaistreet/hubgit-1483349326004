@@ -73,7 +73,16 @@
  <img src="img/logo.png" alt="" width="150" height="40" />
  </a>
  </div>
+<div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+<ul class="nav navbar-nav">
+<!---header collaspson should be written here ...................!>
 
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+ </div>
+ <!-- /.container -->
+  </nav>
 <!-- Collect the nav links, forms, and other content for toggling -->
 
  <!-- /.container -->
