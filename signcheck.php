@@ -195,7 +195,7 @@
 <div class="panel-body">
 <?php
 
-
+session_start();
 require_once("db_const.php");
 	
  
@@ -215,7 +215,8 @@ $sql = "SELECT * from RETAIL_CUST where MOBILE_NO='$Mobile_No' and PASSWORD='$pa
 	$Password=$row[5];   
 	   
 	   
-	  
+	  $_SESSION['Mobile_No']=$mobile_no;
+	$_SESSION['CUST_id']=$CUST_id;
 		
 	
     
