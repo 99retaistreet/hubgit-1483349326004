@@ -162,7 +162,7 @@
 <p class="bold text-left">Monday - Saturday, 8am to 10pm </p>
 </div>
 <div class="col-sm-6 col-md-6">
-<p class="bold text-right">Call us now +62 008 65 001</p>
+<p class="bold text-right">Call us now .....</p>
 </div>
 </div>
 </div>
@@ -181,22 +181,7 @@
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
 <ul class="nav navbar-nav">
-<li class="active"><a href="#intro">Home</a></li>
-<li><a href="#service">Service</a></li>
-<li><a href="#doctor">Doctors</a></li>
-<li><a href="#facilities">Facilities</a></li>
-<li><a href="#pricing">Pricing</a></li>
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge custom-badge red pull-right">Extra</span>More <b class="caret">
-</b>
-</a>
-<ul class="dropdown-menu">
-<li><a href="index.html">Home form</a></li>
-<li><a href="index-video.html">Home video</a></li>
-<li><a href="index-cta.html">Home CTA</a></li>
-<li><a href="https://bootstrapmade.com">Download</a></li>
-</ul>
-</li>
+
 </ul>
 </div>
 <!-- /.navbar-collapse -->
@@ -246,31 +231,8 @@ $Cust_Id=time();
 require("db_const.php");
 
 
-if(!empty($_POST['mobile_no'])&& !empty($_POST['e_mail']))
-{
-$stmt="select MOBILE_NO from retail_cust where MOBILE_NO=$mobile_no limit 1";
-$result=db2_prepare($stmt,$conn);
-db2_execute($result);
-$check1=db2_num_rows($result);
-$query="select E_MAIL from retail_cust where E_MAIL=$e_mail limit 1";
-$results=db2_prepare($query,$conn);
-db2_execute($results);
-$check2=db2_num_rows($results);
-if($check1>0 )
 
-{
-echo " Mobile Number already exists ";
-echo '<a href="register.php">Plze register Again</a>';
-}    
-elseif($check2>0)
-{
-    echo " E_MAIL already exists ";
-echo '<a href="register.php">Plze register Again</a>';
-}
-}
 
-else
-{
 
 $stmt = db2_prepare($conn,"INSERT INTO RETAIL_CUST(CUST_ID,NAME,E_MAIL,MOBILE_NO,PASSWORD,STORE_ID) VALUES('$Cust_Id','$name','$e_mail','$mobile_no','$pass','$Store_Id')");
 
@@ -285,6 +247,6 @@ if (!db2_execute($stmt)) {
 echo "<script type='text/javascript'>window.location.href = 'index.php';</script>";
            
 		echo "<p>Thankyou For Registeration</p>";;
-}
+
 ?>
 </section>
