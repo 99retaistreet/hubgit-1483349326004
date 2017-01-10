@@ -1,9 +1,14 @@
 <?php
 include 'db_const.php';
-$sql = "SELECT * FROM RETAIL_CUST ";
+SESSION_START();
+
+  $Mobile_No=$_SESSION['Mobile_No'];
+
+	$CUST_ID=$_SESSION['CUST_id'];
+
+$sql = "SELECT * FROM RETAIL_CUST  where MOBILE_NO=$Mobile_No and CUST_ID=$CUST_ID ";
 $stmt = db2_prepare($conn, $sql);
 $result = db2_execute($stmt);
-
 while ($row = db2_fetch_assoc($stmt)) {
      
     echo    $row['NAME'];
