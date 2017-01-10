@@ -35,7 +35,7 @@ if($cart->total_items() <= 0){
 }
 // set customer ID in session
 $_SESSION['sessCustomerID'] = 1;
-?>
+?> 
 
 
 
