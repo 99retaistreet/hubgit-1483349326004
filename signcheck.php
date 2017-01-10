@@ -139,7 +139,7 @@
 <p class="bold text-left">Monday - Saturday, 8am to 10pm </p>
 </div>
 <div class="col-sm-6 col-md-6">
-<p class="bold text-right">Call us now +62 008 65 001</p>
+<p class="bold text-right">Call us now </p>
 </div>
 </div>
 </div>
@@ -216,7 +216,7 @@ $sql = "SELECT * from RETAIL_CUST where MOBILE_NO='$Mobile_No' and PASSWORD='$pa
 	   
 	   
 	  $_SESSION['Mobile_No']=$mobile_no;
-	$_SESSION['CUST_id']=$CUST_id;
+	$_SESSION['CUST_id']=$Cust_id;
 		
 	
     
