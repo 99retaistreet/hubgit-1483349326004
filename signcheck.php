@@ -223,7 +223,7 @@ require_once("db_const.php");
 	$Mobile_No = $_POST['Mobile_No'];
 	$password = $_POST['password'];
        
-$sql = "SELECT * from dash107813.RETAIL_CUST where MOBILE_NO='$Mobile_No' and PASSWORD='$password' LIMIT 1 ";
+$sql = "SELECT * from RETAIL_CUST where MOBILE_NO='$Mobile_No' and PASSWORD='$password' LIMIT 1 ";
 	
     $stmt = db2_prepare($conn, $sql);
     $result = db2_execute($stmt);
