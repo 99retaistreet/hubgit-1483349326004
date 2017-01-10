@@ -73,9 +73,11 @@
  <img src="img/logo.png" alt="" width="150" height="40" />
  </a>
  </div>
+
+<!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
 <ul class="nav navbar-nav">
-<!---header collaspson should be written here ...................!>
+
 
 </ul>
 </div>
@@ -83,10 +85,6 @@
  </div>
  <!-- /.container -->
   </nav>
-<!-- Collect the nav links, forms, and other content for toggling -->
-
- <!-- /.container -->
-  
 	
 
 	<!-- Section: intro -->
@@ -119,14 +117,13 @@
 <div class="panel-heading">
 <h3 class="panel-title"><span class="fa fa-pencil-square-o"></span>REGISTER HERE <small>(It's free!)</small></h3>
 </div>
-
 <div class="panel-body">
-<form role="form" action="code_exec.php" class="lead" method="post" onsubmit="return checkall();>
+<form role="form" action="code_exec.php" class="lead" method="post">
 <div class="row">
 <div class="col-xs-6 col-sm-6 col-md-6">
 <div class="form-group">
 <label>Mobile_no</label>
-<input type="text" ID="tbNumbers" name="mobile_no"class="form-control input-md" required maxlength="10" onkeypress="javascript:return isNumber(event)" onkeyup="checkname();"/>
+<input type="text" ID="tbNumbers" name="mobile_no"class="form-control input-md" required maxlength="10" onkeypress="javascript:return isNumber(event)"/>
 </div>
 </div>
 <div class="col-xs-6 col-sm-6 col-md-6">
@@ -143,7 +140,7 @@
 <div class="form-group">
 <label>Email</label>
 
-<input type="text" name="e_mail" id="email" class="form-control input-md" E_MAIL required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" onkeyup="checkemail();"/>
+<input type="text" name="e_mail" id="email" class="form-control input-md" E_MAIL required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
 </div>
 </div>
 <div class="col-xs-6 col-sm-6 col-md-6">
