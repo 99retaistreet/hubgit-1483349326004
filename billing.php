@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">   
 
-    <title>99 Retail Pvt Ltd</title>
+    <title>99 Retail Pvt Ltd</title>  
 	
     <!-- css -->
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
