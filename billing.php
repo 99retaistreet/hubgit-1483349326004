@@ -122,8 +122,7 @@ while ($row = db2_fetch_assoc($stmt)) {
 							<i class="fa fa-check fa-3x circled bg-skin"></i>
 							<h4 class="h-bold"> Your Uploaded Priscription </h4>
 							<p>
-							The Priscription you have Uploaded should be given by the doctors consult 							</p>
-
+							The Priscription you have uploaded ensure that the prescription is valid.
                                                </ul>	</ul>
 						</div>
 					</div></div></div></div>
