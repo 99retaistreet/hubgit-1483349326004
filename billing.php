@@ -467,7 +467,7 @@ function popup(mylink, windowname)
   
         <?php
        $count=0;
-        //get rows query
+        //get rows query    
         $stmt = "SELECT * FROM RETAIL_STORE_PROD WHERE STORE_ID='1472222821'";
        $result = db2_prepare($conn, $stmt);
        db2_execute($result);
