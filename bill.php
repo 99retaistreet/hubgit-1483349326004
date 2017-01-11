@@ -110,7 +110,7 @@ $_Session['Prod_Id']=$item["PROD_ID"]
 						          
 							<div class="panel panel-skin">
 							<div class="panel-heading">
-									<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Oder Details <small>(It's free!)</small></h3>
+									<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span> Order Details </h3>
 									</div>
 									<div class="panel-body">
 				<title>Billing Info</title>
@@ -171,10 +171,10 @@ return false;
       
 
  
- <table  border: thin solid black;width: auto; height: auto; background-colour:lightblue >   
+ <table  border="thin solid black;width: auto; height: auto;" background-colour="lightblue" >   
 
             <tr><td>Order Total:</td><td><input type="text" readonly="readonly" value="<?php session_start();
-echo $_SESSION['Total'];?>" </td></tr>
+echo $_SESSION['Total'];?>" </td></tr></br>
              
 <tr><td>Phone:</td><td><input type="text" name="mobile_no" required maxlength="10" onkeypress="javascript:return isNumber(event)" </td></tr>
             <tr><td>Your Name:</td><td><input type="text" name="name"  /></td></tr>
