@@ -135,7 +135,7 @@ caption {
   color: silver;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 5px;
+  padding: 2px;
 }
 thead {
   background: SteelBlue;
@@ -143,7 +143,7 @@ thead {
 }
 th,
 td {
-  padding: 5px 10px;
+  padding: 2px 8px;
 }
 tbody tr:nth-child(even) {
   background: WhiteSmoke;
@@ -165,9 +165,9 @@ tfoot tr th:last-child {
   font-family: monospace;
 }
    
-    .table{width: 65%;float: left;}
-    .shipAddr{width: 30%;float: left;margin-left: 30px;}
-    .footBtn{width: 95%;float: left;}
+    .table{width: 50%;float: left;}
+    .shipAddr{width: 30%;float: left;margin-left: 20px;}
+    .footBtn{width: 50%;float: left;}
     .orderBtn {float: right;}
     </style>
 </head>
