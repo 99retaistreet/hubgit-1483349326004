@@ -252,15 +252,6 @@ Fill your address and order will be delivered at home
 </div>
 </div>
 
-				
-
-
-</div>
-	 	<div class="col-sm-3 col-md-3">
-<div class="wow fadeInUp" data-wow-delay="0.2s">
-<div class="box text-center">
-
-</div>
 </div>
 </div>
 	<div id="section1">
