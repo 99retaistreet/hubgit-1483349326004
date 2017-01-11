@@ -114,7 +114,7 @@ thead {
 }
 th,
 td {
-  padding: 2px 8px;
+  padding: 2px 4px;
 }
 tbody tr:nth-child(even) {
   background: WhiteSmoke;
@@ -136,9 +136,9 @@ tfoot tr th:last-child {
   font-family: monospace;
 }
    
-    .table{width: 50%;float: left;}
-    .shipAddr{width: 30%;float: left;margin-left: 20px;}
-    .footBtn{width: 50%;float: left;}
+    .table{width: 20%;float: left;}
+    .shipAddr{width: 20%;float: left;margin-left: 10px;}
+    .footBtn{width: 20%;float: left;}
     .orderBtn {float: right;}
     </style>
 </head>
