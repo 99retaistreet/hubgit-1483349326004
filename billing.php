@@ -225,8 +225,8 @@ echo "Invalid file detail ::<br> file type ::".$_FILES["file"]["type"]." , file 
 </div>
 </div>
 	
-	
-<div class="col-sm-6 col-md-4" style="width:100px;height:100px;border:1px solid #000;">
+	<div style="width:300px;height:100px;border:1px solid #000;">
+<div class="col-sm-6 col-md-4" >
 <div class="wow fadeInUp" data-wow-delay="0.2s">
 
 	<div class="box text-center" >
@@ -240,8 +240,9 @@ Add some more medicines beyond your priscription
 </div>
 </div>
 </div>	
-	
-<div class="col-sm-3 col-md-3" style="width:100px;height:100px;border:1px solid #000;">
+	</div>
+	<div style="width:100px;height:100px;border:1px solid #000;">
+<div class="col-sm-3 col-md-3" >
 <div class="wow fadeInUp" data-wow-delay="0.2s">
 <div class="box text-center">
 <i class="fa fa-list-alt fa-3x circled bg-skin"></i>
@@ -254,7 +255,7 @@ Fill your address and order will be delivered at home
 </div>
 				
 
-
+</div>
 </div>
 	<div id="section1">
 <div id="foo" class="wow fadeInDown" style="display:none;">
