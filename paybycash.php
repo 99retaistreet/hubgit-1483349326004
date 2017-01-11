@@ -1,7 +1,6 @@
 <?php
 // include database configuration file
 include 'db_const.php';
-include 'header.php'
 // initializ shopping cart class
 
 
