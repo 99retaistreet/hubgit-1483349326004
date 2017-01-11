@@ -40,8 +40,8 @@ $_SESSION['sessCustomerID'] = 1;
 
 
     
-    <table border="0" class="table_fields"  id="tablepaging"cellpadding="2px" cellspacing="20px" border-collapse="collapse"
-    table-layout="fixed" width="100px">
+    <table border="0" style="border: 1px solid black; width: 100%; word-wrap:break-word;
+              table-layout: fixed;" class="table_fields"  id="tablepaging"cellpadding="2px" cellspacing="20px"  width="100px">
     <thead>
         <tr class="table_fields_top">
             <th>Product</th>
