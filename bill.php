@@ -40,7 +40,8 @@ $_SESSION['sessCustomerID'] = 1;
 
 
     
-    <table border="0" class="table_fields"  id="tablepaging"cellpadding="2px" cellspacing="20px" width="100px">
+    <table border="0" class="table_fields"  id="tablepaging"cellpadding="2px" cellspacing="20px" border-collapse="collapse"
+    table-layout="fixed" width="100px">
     <thead>
         <tr class="table_fields_top">
             <th>Product</th>
@@ -66,7 +67,7 @@ $_Session['Prod_Id']=$item["PROD_ID"]
 ?>
         
        <tr class="table_fields_top">
-            <td><?php echo $item["PROD_NM"]; ?></td>
+            <td word-wrap="break-word"><?php echo $item["PROD_NM"]; ?></td>
             <td><?php echo 'Rs'.$item["price"].''; ?></td>
             <td><?php echo $item["qty"]; ?></td>
             <td><?php echo 'Rs'.$item["subtotal"].''; ?></td>
