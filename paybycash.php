@@ -8,7 +8,7 @@ $cart = new Cart;
 // redirect to home if cart is empty
 // set customer ID in session
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <title>Checkout - PHP Shopping Cart Tutorial</title>
