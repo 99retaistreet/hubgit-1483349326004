@@ -179,7 +179,7 @@ echo $_SESSION['Total'];?>" </td></tr><td>&nbsp;</td>
 <tr><td>Phone:</td><td><input type="text" name="mobile_no" required maxlength="10" onkeypress="javascript:return isNumber(event)" </td></tr><td>&nbsp;</td>
             <tr><td>Your Name:</td><td><input type="text" name="name"  /></td></tr><td>&nbsp;</td>
             <tr><td>Email:</td><td><input type="text" name="e_mail" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"  </td></tr><td>&nbsp;</td>
-            <tr><td>Shipping Address:</td><td><textarea name="shippingaddress" cols="20" rows="5" ... ></textarea></td></tr><td>&nbsp;</td>
+            <tr><td>Shipping Address:</td><td><textarea name="shippingaddress" cols="20" rows="5" ... ></textarea></td></tr>
             <tr><td>CheckBox:</td><td><input type="checkbox" name="billingtoo" onclick="FillBilling(this.form)">
               Check this box if Billing Address and Shipping are the same</td></tr>
                  
