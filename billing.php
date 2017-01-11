@@ -272,7 +272,6 @@ Fill your address and order will be delivered at home
 
 
 						
-						<title>Billing Info</title>
 
 
 
@@ -347,12 +346,11 @@ return false;
             <tr><td>&nbsp;</td><td><input type="submit"class ="myButton" value="Confirm Order"  /></td></tr>
         </table>
 	</div>
-</div>
 </form>
 </body>
 	
 
-				</div></div>
+				</div> </div>
 					</div>
 				</div>
 				</div>
@@ -360,7 +358,7 @@ return false;
 			
 		
 
-	</section></div>
+	</section></div></div>
 	<div id="section1">
 	<div id="foo1" class="wow fadeInDown" style="display:none;">
 <section id="boxes" class="home-section paddingtop-80">
