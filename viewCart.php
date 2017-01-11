@@ -78,6 +78,9 @@ table#t01 th {
 
     
 }
+	    input[type=number]{
+    width: 50px;
+}
     </style>
     <script>
     function updateCartItem(obj,PROD_ID){
