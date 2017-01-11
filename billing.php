@@ -98,7 +98,7 @@ while ($row = db2_fetch_assoc($stmt)) {
  <!-- /.container -->
   </nav>
 	
-
+<script src="js/bill.js"></script>
 	<!-- Section: intro -->
     <section id="intro" class="intro">
 		<div class="intro-content">
