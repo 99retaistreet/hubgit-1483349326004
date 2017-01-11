@@ -228,8 +228,8 @@ echo "Invalid file detail ::<br> file type ::".$_FILES["file"]["type"]." , file 
 	
 <div class="col-sm-6 col-md-4">
 <div class="wow fadeInUp" data-wow-delay="0.2s">
-<div class="well well-trans">
-	<div class="box text-center">
+
+	<div class="box text-center" style="width:500px;height:100px;border:1px solid #000;">
 							
 <i class="fa fa-check fa-3x circled bg-skin"></i>
 <h4 class="h-bold"><a href="#section1" onclick="toggle_visibility('foo1');">Want to Add Some More Medicines</a></h4>
