@@ -1,7 +1,7 @@
 <?php
 // include database configuration file
 include 'db_const.php';
-
+include 'header.php';
 // initializ shopping cart class
 include 'Cart.php';
 $cart = new Cart;
@@ -179,4 +179,7 @@ if (!db2_execute($result)) {
    </table>
     </table>
 </body>
+    <?php 
+    include 'footer.php';
+    ?>
 </html>
