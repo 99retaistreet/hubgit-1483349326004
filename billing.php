@@ -269,7 +269,7 @@ Fill your address and order will be delivered at home
 <div class="panel-heading">
 <h3 class="panel-title"><span class="fa fa-pencil-square-o"></span>BILLING INFO</h3>
 </div>
-<div class="panel-body">
+
 
 						
 						<title>Billing Info</title>
@@ -314,7 +314,7 @@ return false;
 </script>  
 
 
-</head>
+
 
 
 
@@ -332,8 +332,7 @@ return false;
  
  <table  width="500" height="500" border="0"  cellpadding="1px">   
 
-            <tr><td>Order Total:</td><td><input type="text" readonly="readonly" value="<?php session_start();
-echo $_SESSION['Total'];?>" /></td></tr>
+            <tr><td>Order Total:</td><td><input type="text" readonly="readonly" value="0" /></td></tr>
              
 <tr><td>Phone:</td><td><input type="text" name="mobile_no" required maxlength="10" onkeypress="javascript:return isNumber(event)" </td></tr>
             <tr><td>Your Name:</td><td><input type="text" name="name"  /></td></tr>
@@ -357,7 +356,7 @@ echo $_SESSION['Total'];?>" /></td></tr>
 					</div>
 				</div>
 				</div>
-				</div></div></div>
+				</div></div>
 			
 		
 
