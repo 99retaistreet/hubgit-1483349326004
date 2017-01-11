@@ -115,7 +115,7 @@ table#t01 th {
             <td><?php echo $item["PROD_NM"]; ?></td>
             <td><?php echo 'Rs'.$item["MRP"].' '; ?></td>
            
-            <td><input type="number" class="" value="<?php echo $item["qty"]; ?>" onchange="updateCartItem(this, '<?php echo $item["rowid"]; ?>')"></td>
+            <td><input type="number" style="width: 25%; float:left;" class="" value="<?php echo $item["qty"]; ?>" onchange="updateCartItem(this, '<?php echo $item["rowid"]; ?>')"></td>
             <td><?php echo 'Rs'.$item["subtotal"].''; ?></td>
             <td>
                 <!--<a href="cartAction.php?action=updateCartItem&id=" class="btn btn-info"><i class="glyphicon glyphicon-refresh"></i></a>-->
