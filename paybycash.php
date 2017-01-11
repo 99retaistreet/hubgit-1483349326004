@@ -87,13 +87,6 @@
 							
 						
 
-                                               </ul>	</ul>
-						
-					</div></div></div>
-			
-					
-
-						</div>
 	
 
 
@@ -257,3 +250,11 @@ if (!db2_execute($result)) {
 
 
 
+
+                                               </ul>	</ul>
+						
+					</div></div></div>
+			
+					
+
+						</div>
