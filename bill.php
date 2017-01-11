@@ -171,7 +171,7 @@ return false;
       
 
  
- <table  border="thin solid black;width: auto; height: auto;" background-colour="lightblue" >   
+ <table>   
 
             <tr><td>Order Total:</td><td><input type="text" readonly="readonly" value="<?php session_start();
 echo $_SESSION['Total'];?>" </td></tr></br>
