@@ -113,7 +113,7 @@ $cart = new Cart;
 }
 caption {
   text-align: left;
-  color: silver;
+  color: white;
   font-weight: bold;
   text-transform: uppercase;
   padding: 2px;
@@ -127,7 +127,7 @@ td {
   padding: 2px 4px;
 }
 tbody tr:nth-child(even) {
-  background: WhiteSmoke;
+  background: White;
 }
 tbody tr td:nth-child(2) {
   text-align:center;
