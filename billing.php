@@ -278,7 +278,7 @@ Fill your address and order will be delivered at home
 function FillBilling(f) {
   if(f.billingtoo.checked == true) {
    
-    f.Address.value = f.address.value;
+    f.billingaddress.value=f.shippingaddress.value;
   }
 }
  function isNumber(evt) {
