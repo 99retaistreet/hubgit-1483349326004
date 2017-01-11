@@ -94,18 +94,9 @@
 					
 
 						</div>
+	
 
 
-					
-					<div class="col-lg-6">
-						<div class="form-wrapper">
-						<div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
-						          
-							<div class="panel panel-skin">
-							<div class="panel-heading">
-									<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span>your Overall Summary </h3>
-									</div>
-									<div class="panel-body" width="100%">
 
 <?php
 // include databse configuration file
@@ -265,13 +256,4 @@ if (!db2_execute($result)) {
 
 
 
-										</div>
-							</div>				
-						</div>
-						</div>
-						</div>
-					</div>					
-				</div>		
-			</div>
-		</div>		
-    </section>
+
