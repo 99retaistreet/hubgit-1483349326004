@@ -109,7 +109,7 @@ while ($row = db2_fetch_assoc($stmt)) {
 				<div class="row">
 					<div class="col-lg-6">
 					<div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-					<h2 class="h-ultra">Hemas medical group</h2>
+					<h2 class="h-ultra">Pierson medical group</h2>
 					</div>
 					
 	
@@ -125,7 +125,8 @@ while ($row = db2_fetch_assoc($stmt)) {
 							<i class="fa fa-check fa-3x circled bg-skin"></i>
 							<h4 class="h-bold"><a href="#" onclick="toggle_visibility('foo');">Upload Your Priscription</h4>
 							<p>
-							Lorem ipsum dolor sit amet, nec te mollis utroque honestatis, ut utamur molestiae vix, graecis eligendi ne.
+							1. Ensure that the picture or scan is such that the entire prescription is visible (including the doctor/clinic’s letterhead).
+							2. Ensure that the picture is taken in a way that the handwriting/type is visible clearly.
 							</p>
 
                                                </ul>	</ul>
