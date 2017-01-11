@@ -1,7 +1,7 @@
 <?php
 // include database configuration file
 include 'db_const.php';
-
+include 'header.php'
 // initializ shopping cart class
 
 
@@ -69,7 +69,7 @@ tfoot tr th:last-child {
   font-family: monospace;
 }
 
-    .container{width: 100%;padding: 50px;}
+    
     .table{width: 65%;float: left;}
     .shipAddr{width: 30%;float: left;margin-left: 30px;}
     .footBtn{width: 95%;float: left;}
