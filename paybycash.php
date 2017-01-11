@@ -1,18 +1,54 @@
+<section id="intro" class="intro">
+		<div class="intro-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+					<div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
+					<h2 class="h-ultra">Person Medical Summary</h2>
+					</div>
+					
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3 col-md-3">
+                                 <div class="well well-trans">
+<div class="wow fadeInRight" data-wow-delay="0.1s">
+<ul class="lead-list">
+					<div class="wow fadeInUp" data-wow-delay="0.2s">
+						<div class="box text-center">
+							
+							<i class="fa fa-check fa-3x circled bg-skin"></i>
+							<h4 class="h-bold"> Your Overall Summary </h4>
+							<p>
+							 							</p>
+
+                                               </ul>	</ul>
+						</div>
+					</div></div></div></div>
+			
+					
+
+						</div>
+						
+
+
+					
+					<div class="col-lg-6">
+						<div class="form-wrapper">
+						<div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+						          
+							<div class="panel panel-skin">
+							<div class="panel-heading">
+									<h3 class="panel-title"><span class="fa fa-pencil-square-o"></span>Your Priscription </h3>
+									</div>
+									<div class="panel-body">
+
 <?php
 // include database configuration file
 include 'db_const.php';
-
 // initializ shopping cart class
-include 'Cart.php';
-$cart = new Cart;
-
 // redirect to home if cart is empty
-
-
 // set customer ID in session
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +63,6 @@ $cart = new Cart;
     table {
   font-family: "Helvetica Neue", Helvetica, sans-serif
 }
-
 caption {
   text-align: left;
   color: silver;
@@ -35,42 +70,34 @@ caption {
   text-transform: uppercase;
   padding: 5px;
 }
-
 thead {
   background: SteelBlue;
   color: white;
 }
-
 th,
 td {
   padding: 5px 10px;
 }
-
 tbody tr:nth-child(even) {
   background: WhiteSmoke;
 }
-
 tbody tr td:nth-child(2) {
   text-align:center;
 }
-
 tbody tr td:nth-child(3),
 tbody tr td:nth-child(4) {
   text-align: right;
   font-family: monospace;
 }
-
 tfoot {
   background: SeaGreen;
   color: white;
   text-align: right;
 }
-
 tfoot tr th:last-child {
   font-family: monospace;
 }
-
-    .container{width: 100%;padding: 50px;}
+    
     .table{width: 65%;float: left;}
     .shipAddr{width: 30%;float: left;margin-left: 30px;}
     .footBtn{width: 95%;float: left;}
@@ -80,6 +107,7 @@ tfoot tr th:last-child {
 <body>
 <h1>Order Summary</h1>
 <div class="container">
+
        <?php
         session_start();
   
@@ -98,7 +126,6 @@ $BillingAddress =$_POST['billingaddress'];
 <tr><th>ShippingAddress:</th><td><?php echo $ShippingAddress; ?></td></tr>
 <tr><th>BillingAddress:</th><td><?php echo $BillingAddress; ?></td></tr>
      
- 
    <table>
   
   <thead>
@@ -114,18 +141,6 @@ $BillingAddress =$_POST['billingaddress'];
     
     
         <?php
-        session_start();
-  
-  //-------sending customer information-----------//
-  
-$name=$_POST['name'];
-$Mobile_No =$_POST['mobile_no'];
-$E_mail =$_POST['e_mail'];
-$ShippingAddress =$_POST['shippingaddress'];
-$BillingAddress =$_POST['billingaddress'];
-
-
-
   
   //-------sending customer information-----------//
   
@@ -143,22 +158,11 @@ $_Session['Price']=$item["price"];
 $_Session['Qty']=$item["qty"];
 $_Session['Subtotal']=$item["subtotal"];
 $_SESSION['Prod_Id']=$item["PROD_ID"];
-
-
 $stmt=db2_prepare($conn,"INSERT INTO RETAIL_STR_BILL_DETAILS_INTERNET(TRI_ID,ORDERID,STORE_ID,MOBILE_NO,SHIPING_ADDR,BILL_ADDR,PRODUCT_ID,PROD_NM,MRP,QTY)VALUES('$TRI_VALUE','$Order_Id','1472222821','$Mobile_No','$ShippingAddress','$BillingAddress','{$_SESSION['Prod_Id']}','{$_SESSION['Prod_Nm']}','{$_Session['Price']}','{$_Session['Qty']}')");
 //*End Of query*// 
-if (!db2_execute($stmt)) {
-    printf("%s\n", db2_stmt_error($stmt));
-    $err = db2_stmt_errormsg();
-
-}
 
 ?>
-<tr><th>Name:</th><td><?php echo $name; ?></td></tr>
-<tr><th>Mobile_NO:</th><td><?php echo $Mobile_No; ?></td></tr>
-<tr><th>E_Mail:</th><td><?php echo $E_mail; ?></td></tr>
-<tr><th>ShippingAddress:</th><td><?php echo $ShippingAddress; ?></td></tr>
-<tr><th>BillingAddress:</th><td><?php echo $BillingAddress; ?></td></tr> 
+
 
 <td><?php echo $Order_Id; ?></td>
             <td><?php echo $item["PROD_NM"]; ?></td>
@@ -169,8 +173,8 @@ if (!db2_execute($stmt)) {
         <?php }
         $result=db2_prepare($conn,"INSERT INTO RETAIL_STR_BILL_MASTER_INTERNET(TRI_ID,STORE_ID,NAME,MOBILE_NO,TOTAL,SHIPING_ADDR,BILL_ADDR) VALUES($TRI_VALUE,'1472222821','$name','$Mobile_No','$ordertotal', '$ShippingAddress','$BillingAddress')");
 if (!db2_execute($result)) {
-   printf("%s\n", db2_stmt_error($result));
-    $err = db2_stmt_errormsg();
+   //printf("%s\n", db2_stmt_error($result));
+    //$err = db2_stmt_errormsg();
     
 }
         
@@ -191,5 +195,17 @@ if (!db2_execute($result)) {
     </tfoot>
    </table>
     </table>
-</body>
-</html>
+
+
+
+										</div>
+							</div>				
+						</div>
+						</div>
+						</div>
+					</div>					
+				</div>		
+			</div>
+		</div>		
+    </section>
+	
