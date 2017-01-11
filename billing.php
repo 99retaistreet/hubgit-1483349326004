@@ -217,11 +217,7 @@ echo "Invalid file detail ::<br> file type ::".$_FILES["file"]["type"]." , file 
 	<div class="col-sm-3 col-md-3">
 <div class="wow fadeInUp" data-wow-delay="0.2s">
 <div class="box text-center">
-<i class="fa fa-user-md fa-3x circled bg-skin"></i>
-<h4 class="h-bold">Consult A Doctor</h4>
-<p>
-Need A doctor Make An appiontment
-</p>
+
 </div>
 </div>
 </div>
