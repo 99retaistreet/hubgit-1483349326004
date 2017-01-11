@@ -1,8 +1,10 @@
 <?php
 // include database configuration file
 include 'db_const.php';
-// initializ shopping cart class
 
+// initializ shopping cart class
+include 'Cart.php';
+$cart = new Cart;
 
 // redirect to home if cart is empty
 
@@ -68,7 +70,7 @@ tfoot tr th:last-child {
   font-family: monospace;
 }
 
-    
+    .container{width: 100%;padding: 50px;}
     .table{width: 65%;float: left;}
     .shipAddr{width: 30%;float: left;margin-left: 30px;}
     .footBtn{width: 95%;float: left;}
@@ -79,24 +81,7 @@ tfoot tr th:last-child {
 <h1>Order Summary</h1>
 <div class="container">
 
-       <?php
-        session_start();
-  
-  //-------sending customer information-----------//
-  
-$name=$_POST['name'];
-$Mobile_No =$_POST['mobile_no'];
-$E_mail =$_POST['e_mail'];
-$ShippingAddress =$_POST['shippingaddress'];
-$BillingAddress =$_POST['billingaddress'];
-    ?>
-    <table>
-    <tr><th>Name:</th><td><?php echo $name; ?></td></tr>
-<tr><th>Mobile_NO:</th><td><?php echo $Mobile_No; ?></td></tr>
-<tr><th>E_Mail:</th><td><?php echo $E_mail; ?></td></tr>
-<tr><th>ShippingAddress:</th><td><?php echo $ShippingAddress; ?></td></tr>
-<tr><th>BillingAddress:</th><td><?php echo $BillingAddress; ?></td></tr>
-     
+ 
    <table>
   
   <thead>
@@ -112,6 +97,15 @@ $BillingAddress =$_POST['billingaddress'];
     
     
         <?php
+        session_start();
+  
+  //-------sending customer information-----------//
+  
+$name=$_POST['name'];
+$Mobile_No =$_POST['mobile_no'];
+$E_mail =$_POST['e_mail'];
+$ShippingAddress =$_POST['shippingaddress'];
+$BillingAddress =$_POST['billingaddress'];
 
 
 
@@ -137,13 +131,17 @@ $_SESSION['Prod_Id']=$item["PROD_ID"];
 $stmt=db2_prepare($conn,"INSERT INTO RETAIL_STR_BILL_DETAILS_INTERNET(TRI_ID,ORDERID,STORE_ID,MOBILE_NO,SHIPING_ADDR,BILL_ADDR,PRODUCT_ID,PROD_NM,MRP,QTY)VALUES('$TRI_VALUE','$Order_Id','1472222821','$Mobile_No','$ShippingAddress','$BillingAddress','{$_SESSION['Prod_Id']}','{$_SESSION['Prod_Nm']}','{$_Session['Price']}','{$_Session['Qty']}')");
 //*End Of query*// 
 if (!db2_execute($stmt)) {
-    //printf("%s\n", db2_stmt_error($stmt));
-    //$err = db2_stmt_errormsg();
+    printf("%s\n", db2_stmt_error($stmt));
+    $err = db2_stmt_errormsg();
 
 }
 
 ?>
-
+<tr><th>Name:</th><td><?php echo $name; ?></td></tr>
+<tr><th>Mobile_NO:</th><td><?php echo $Mobile_No; ?></td></tr>
+<tr><th>E_Mail:</th><td><?php echo $E_mail; ?></td></tr>
+<tr><th>ShippingAddress:</th><td><?php echo $ShippingAddress; ?></td></tr>
+<tr><th>BillingAddress:</th><td><?php echo $BillingAddress; ?></td></tr> 
 
 <td><?php echo $Order_Id; ?></td>
             <td><?php echo $item["PROD_NM"]; ?></td>
@@ -154,8 +152,8 @@ if (!db2_execute($stmt)) {
         <?php }
         $result=db2_prepare($conn,"INSERT INTO RETAIL_STR_BILL_MASTER_INTERNET(TRI_ID,STORE_ID,NAME,MOBILE_NO,TOTAL,SHIPING_ADDR,BILL_ADDR) VALUES($TRI_VALUE,'1472222821','$name','$Mobile_No','$ordertotal', '$ShippingAddress','$BillingAddress')");
 if (!db2_execute($result)) {
-   //printf("%s\n", db2_stmt_error($result));
-    //$err = db2_stmt_errormsg();
+   printf("%s\n", db2_stmt_error($result));
+    $err = db2_stmt_errormsg();
     
 }
         
@@ -174,8 +172,11 @@ if (!db2_execute($result)) {
     </tr>
 
     </tfoot>
-   </table>
+    <tr><th>Name:</th><td><?php echo $name; ?></td></tr>
+<tr><th>Mobile_NO:</th><td><?php echo $Mobile_No; ?></td></tr>
+<tr><th>E_Mail:</th><td><?php echo $E_mail; ?></td></tr>
+<tr><th>ShippingAddress:</th><td><?php echo $ShippingAddress; ?></td></tr>
+<tr><th>BillingAddress:</th><td><?php echo $BillingAddress; ?></td></tr> 
     </table>
 </body>
-  
 </html>
