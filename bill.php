@@ -31,7 +31,7 @@ include 'Cart.php';
 $cart = new Cart;
 // redirect to home if cart is empty
 if($cart->total_items() <= 0){
-    header("Location: index.php");
+   // header("Location: index.php");
 }
 // set customer ID in session
 $_SESSION['sessCustomerID'] = 1;
@@ -84,7 +84,7 @@ $_Session['Prod_Id']=$item["PROD_ID"]
             <td class="text-center"><strong>Total <?php echo 'Rs'.$cart->total().''; ?></strong></td>
             <?php } ?>
     
-        <a href="index.php">  Continue Shopping</a>
+        <a href="billing.php">  Continue Shopping</a>
        
     
     
