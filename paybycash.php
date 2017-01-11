@@ -3,8 +3,7 @@
 include 'db_const.php';
 
 // initializ shopping cart class
-include 'Cart.php';
-$cart = new Cart;
+
 
 // redirect to home if cart is empty
 
@@ -139,8 +138,8 @@ $_SESSION['Prod_Id']=$item["PROD_ID"];
 $stmt=db2_prepare($conn,"INSERT INTO RETAIL_STR_BILL_DETAILS_INTERNET(TRI_ID,ORDERID,STORE_ID,MOBILE_NO,SHIPING_ADDR,BILL_ADDR,PRODUCT_ID,PROD_NM,MRP,QTY)VALUES('$TRI_VALUE','$Order_Id','1472222821','$Mobile_No','$ShippingAddress','$BillingAddress','{$_SESSION['Prod_Id']}','{$_SESSION['Prod_Nm']}','{$_Session['Price']}','{$_Session['Qty']}')");
 //*End Of query*// 
 if (!db2_execute($stmt)) {
-    printf("%s\n", db2_stmt_error($stmt));
-    $err = db2_stmt_errormsg();
+    //printf("%s\n", db2_stmt_error($stmt));
+    //$err = db2_stmt_errormsg();
 
 }
 
@@ -156,8 +155,8 @@ if (!db2_execute($stmt)) {
         <?php }
         $result=db2_prepare($conn,"INSERT INTO RETAIL_STR_BILL_MASTER_INTERNET(TRI_ID,STORE_ID,NAME,MOBILE_NO,TOTAL,SHIPING_ADDR,BILL_ADDR) VALUES($TRI_VALUE,'1472222821','$name','$Mobile_No','$ordertotal', '$ShippingAddress','$BillingAddress')");
 if (!db2_execute($result)) {
-   printf("%s\n", db2_stmt_error($result));
-    $err = db2_stmt_errormsg();
+   //printf("%s\n", db2_stmt_error($result));
+    //$err = db2_stmt_errormsg();
     
 }
         
