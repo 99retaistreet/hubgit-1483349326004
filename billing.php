@@ -239,7 +239,7 @@ Add some more medicines beyond your priscription
 </div>
 </div>
 
-	</div>
+	
 	
 <div class="col-sm-3 col-md-3" >
 <div class="wow fadeInUp" data-wow-delay="0.2s">
@@ -254,7 +254,7 @@ Fill your address and order will be delivered at home
 
 				
 
-</div>
+
 </div>
 	 	<div class="col-sm-3 col-md-3">
 <div class="wow fadeInUp" data-wow-delay="0.2s">
