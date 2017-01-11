@@ -1,8 +1,9 @@
 <?php
-// include database configuration file
+// include databse configuration file
 include 'db_const.php';
 // initializ shopping cart class
 include 'Cart.php';
+include 'header.php';
 $cart = new Cart;
 // redirect to home if cart is empty
 // set customer ID in session
@@ -54,7 +55,7 @@ tfoot {
 tfoot tr th:last-child {
   font-family: monospace;
 }
-    .container{width: 100%;padding: 50px;}
+   
     .table{width: 65%;float: left;}
     .shipAddr{width: 30%;float: left;margin-left: 30px;}
     .footBtn{width: 95%;float: left;}
