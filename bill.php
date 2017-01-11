@@ -106,7 +106,7 @@ $_Session['Prod_Id']=$item["PROD_ID"]
 					
 					<div class="col-lg-6">
 						<div class="form-wrapper">
-						<div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
+			 			<div class="wow fadeInRight" data-wow-duration="2s" data-wow-delay="0.2s">
 						          
 							<div class="panel panel-skin">
 							<div class="panel-heading">
