@@ -1,104 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">   
-
-    <title>99 Retail Pvt Ltd</title>
+<?php
+include 'header.php';
+?>
 	
-    <!-- css -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-	<link rel="stylesheet" type="text/css" href="plugins/cubeportfolio/css/cubeportfolio.min.css">
-	<link href="css/nivo-lightbox.css" rel="stylesheet" />
-	<link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
-	<link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
-    <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
-	<link href="css/animate.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet">
 
-	<!-- boxed bg -->
-	<link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
-	<!-- template skin -->
-	<link id="t-colors" href="color/default.css" rel="stylesheet">
-
-
-</head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-
-<div id="wrapper">
-	
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-		<div class="top-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6 col-md-6">
-					<p class="bold text-left">Monday - Saturday, 8am to 10pm </p>
-					</div>
-					<div class="col-sm-6 col-md-6">
-					<p class="bold text-right">Call us now </p>
-					</div>
-				</div>
-			</div>
-		</div>
-        <div class="container navigation">
-		
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="index.html">
-                    <img src="img/logo.png" alt="" width="150" height="40" />
-                </a>
-            </div>
-
-           <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-
-
-	<ul class="nav navbar-nav">
-		<li class="active">
-			<?php
-include 'db_const.php';
-SESSION_START();
-
-  $Mobile_No=$_SESSION['Mobile_No'];
-
-	$CUST_ID=$_SESSION['CUST_id'];
-
-
-
-$sql = "SELECT * FROM RETAIL_CUST  where CUST_ID='$CUST_ID' LIMIT 1 ";
-$stmt = db2_prepare($conn, $sql);
-$result = db2_execute($stmt);
-while ($row = db2_fetch_assoc($stmt)) {
-     
-     $name="<b>".$row['NAME'] ."</b>";
-    echo"<b>";
-    echo "Hello $name";
-    echo "</b>";
-}
-?></li>
-<li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret">
-</b>
-</a>
-<ul class="dropdown-menu">
-<li><a href="logout.php">Logout</a></li>
-
-</ul>
-</li>
-</ul>
-</div>
-<!-- /.navbar-collapse -->
- </div>
- <!-- /.container -->
-  </nav>
-	
-<script src="js/bill.js"></script>
 	<!-- Section: intro -->
     <section id="intro" class="intro">
 		<div class="intro-content">
@@ -124,7 +28,7 @@ while ($row = db2_fetch_assoc($stmt)) {
 							<p>
 							The Priscription you have Uploaded should be given by the doctors consult 							</p>
 
-                                               </ul>	</ul>
+                                               </ul>
 						</div>
 					</div></div></div></div>
 			
@@ -219,7 +123,7 @@ echo "Invalid file detail ::<br> file type ::".$_FILES["file"]["type"]." , file 
 <div class="box text-center">
 							
 <i class="fa fa-check fa-3x circled bg-skin"></i>
-<h4 class="h-bold"><a href="#section1" onclick="toggle_visibility('foo1');">Want to Add Some More Medicines</h4></a>
+<h4 class="h-bold"><a href="#section1" onclick="toggle_visibility('foo1');">Want to Add Some More Medicines</a></h4>
 <p>
 Add some more medicines beyond your priscription 
 </p>
@@ -230,7 +134,7 @@ Add some more medicines beyond your priscription
 <div class="wow fadeInUp" data-wow-delay="0.2s">
 <div class="box text-center">
 <i class="fa fa-list-alt fa-3x circled bg-skin"></i>
-<h4 class="h-bold"><a href="#section2" onclick="toggle_visibility('foo');">Make Billing</h4></a>
+<h4 class="h-bold"><a href="#section" onclick="toggle_visibility('foo');">Make Billing</a></h4>
 <p>
 Fill your address and order will be delivered at home  
 </p>
@@ -251,7 +155,8 @@ Need A doctor Make An appiontment
 </div>
 
 </div>
-<div id="section2">
+	<div id="section">
+
 <div id="foo" class="wow fadeInDown" style="display:none;">
 <section id="boxes" class="home-section paddingtop-80">
 <div class="container">
@@ -266,13 +171,49 @@ Need A doctor Make An appiontment
 <div class="panel-heading">
 <h3 class="panel-title"><span class="fa fa-pencil-square-o"></span>BILLING INFO</h3>
 </div>
-
+<div class="panel-body">
 
 						
 						<title>Billing Info</title>
 
 
 
+<script language="javascript">
+function FillBilling(f) {
+  if(f.billingtoo.checked == true) {
+   
+    f.Address.value = f.address.value;
+  }
+}
+ function isNumber(evt) {
+        var iKeyCode = (evt.which) ? evt.which : evt.keyCode
+        if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
+            return false;
+
+        return true;
+
+}	
+function validate(){
+		var f=document.form1;
+                if(f.mobile_no.value=='')
+                 {
+
+                alert('Your phone number is required');
+                f.mobile_no.focus();
+return false;
+
+
+}
+		if(f.name.value==''){
+			alert('Your name is required');
+			f.name.focus();
+			return false;
+		}
+
+		f.command.value='update';
+		f.submit();
+	}
+</script>  
 
 
 </head>
@@ -322,7 +263,7 @@ echo $_SESSION['Total'];?>" </td></tr>
 			
 		
 
-	</section></div></div>
+	</section></div>
 	<div id="section1">
 	<div id="foo1" class="wow fadeInDown" style="display:none;">
 <section id="boxes" class="home-section paddingtop-80">
@@ -357,7 +298,7 @@ include 'db_const.php';
 	padding: 10px 20px;
 	border: 1px solid #006699;
 	border-radius: 4px;
-	background-color: #00978DF;
+	background-color:#00978DF;
 	color: White;
 	text-decoration: none;
 	font-family: Arial,Helvetica,sans-serif;
@@ -387,6 +328,138 @@ padding: 2px 4px 2px 4px;
 </style>
 
 
+
+<script type="text/javascript">
+
+
+
+
+function Pager(tableName, itemsPerPage) {
+
+this.tableName = tableName;
+
+this.itemsPerPage = itemsPerPage;
+
+this.currentPage = 1;
+
+this.pages = 0;
+
+this.inited = false;
+
+this.showRecords = function(from, to) {
+
+var rows = document.getElementById(tableName).rows;
+
+// i starts from 1 to skip table header row
+
+for (var i = 1; i < rows.length; i++) {
+
+if (i < from || i > to)
+
+rows[i].style.display = 'none';
+
+else
+
+rows[i].style.display = '';
+
+}
+
+}
+
+this.showPage = function(pageNumber) {
+
+if (! this.inited) {
+
+alert("not inited");
+
+return;
+
+}
+
+var oldPageAnchor = document.getElementById('pg'+this.currentPage);
+
+oldPageAnchor.className = 'pg-normal';
+
+this.currentPage = pageNumber;
+
+var newPageAnchor = document.getElementById('pg'+this.currentPage);
+
+newPageAnchor.className = 'pg-selected';
+
+var from = (pageNumber - 1) * itemsPerPage + 1;
+
+var to = from + itemsPerPage - 1;
+
+this.showRecords(from, to);
+
+}
+
+this.prev = function() {
+
+if (this.currentPage > 1)
+
+this.showPage(this.currentPage - 1);
+
+}
+
+this.next = function() {
+
+if (this.currentPage < this.pages) {
+
+this.showPage(this.currentPage + 1);
+
+}
+
+}
+
+this.init = function() {
+
+var rows = document.getElementById(tableName).rows;
+
+var records = (rows.length - 1);
+
+this.pages = Math.ceil(records / itemsPerPage);
+
+this.inited = true;
+
+}
+
+this.showPageNav = function(pagerName, positionId) {
+
+if (! this.inited) {
+
+alert("not inited");
+
+return;
+
+}
+
+var element = document.getElementById(positionId);
+
+var pagerHtml = '<span onclick="' + pagerName + '.prev();" class="pg-normal">< </span> ';
+
+for (var page = 1; page <= this.pages; page++)
+
+pagerHtml += '<style id="pg' + page + '" class="pg-normal;"></style> ';
+
+pagerHtml += '<span onclick="'+pagerName+'.next();" class="pg-normal"> ></span>';
+
+element.innerHTML = pagerHtml;
+
+}
+
+}
+</script>
+<SCRIPT TYPE="text/javascript"> 
+function popup(mylink, windowname) 
+{
+	if (! window.focus)return true;
+	var href; if (typeof(mylink) == 'string') href=mylink; 
+	else href=mylink.href; 
+	window.open(href, windowname, 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=800,height=500'); 
+	return false; 
+	} 
+	</SCRIPT>
 
 
 
