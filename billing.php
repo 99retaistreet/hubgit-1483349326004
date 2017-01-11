@@ -226,10 +226,10 @@ echo "Invalid file detail ::<br> file type ::".$_FILES["file"]["type"]." , file 
 </div>
 	
 	
-<div class="col-sm-6 col-md-4">
+<div class="col-sm-6 col-md-4" style="width:100px;height:100px;border:1px solid #000;">
 <div class="wow fadeInUp" data-wow-delay="0.2s">
 
-	<div class="box text-center" style="width:500px;height:100px;border:1px solid #000;">
+	<div class="box text-center" >
 							
 <i class="fa fa-check fa-3x circled bg-skin"></i>
 <h4 class="h-bold"><a href="#section1" onclick="toggle_visibility('foo1');">Want to Add Some More Medicines</a></h4>
@@ -241,7 +241,7 @@ Add some more medicines beyond your priscription
 </div>
 </div>	
 	
-<div class="col-sm-3 col-md-3">
+<div class="col-sm-3 col-md-3" style="width:100px;height:100px;border:1px solid #000;">
 <div class="wow fadeInUp" data-wow-delay="0.2s">
 <div class="box text-center">
 <i class="fa fa-list-alt fa-3x circled bg-skin"></i>
