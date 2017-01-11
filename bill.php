@@ -121,7 +121,7 @@ $_Session['Prod_Id']=$item["PROD_ID"]
 function FillBilling(f) {
   if(f.billingtoo.checked == true) {
    
-    f.Address.value = f.address.value;
+    f.shippingaddress.value = f.billingaddress.value;
   }
 }
  function isNumber(evt) {
