@@ -7,7 +7,8 @@
 					<div class="widget">
 						<h5>About 99 Retail_Street</h5>
 						<p>
-						Lorem ipsum dolor sit amet, ne nam purto nihil impetus, an facilisi accommodare sea
+						------------------------------------------------------------
+							--------------------------------------
 						</p>
 					</div>
 					</div>
@@ -26,9 +27,9 @@
 				<div class="col-sm-6 col-md-4">
 					<div class="wow fadeInDown" data-wow-delay="0.1s">
 					<div class="widget">
-						<h5>Medicio center</h5>
+						<h5>Pierson Medical Center</h5>
 						<p>
-						Nam leo lorem, tincidunt id risus ut, ornare tincidunt naqunc sit amet.
+						........................//.......................................
 						</p>
 						<ul>
 							<li>
@@ -41,7 +42,7 @@
 								<span class="fa-stack fa-lg">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-phone fa-stack-1x fa-inverse"></i>
-								</span> +62 0888 904 711
+								</span> +00000000000000
 							</li>
 							<li>
 								<span class="fa-stack fa-lg">
