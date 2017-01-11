@@ -131,7 +131,7 @@ table#t01 th {
     </tbody>
     <tfoot>
         <tr>
-            <td><a class="btn btn-primary" href="billing.php"><i class="glyphicon glyphicon-menu-left"></i> <img src="images/button_continue-shopping.png"></a></td>
+		
             <td colspan="2"></td>
             <?php if($cart->total_items() > 0){ ?>
             <td class="text-center"><strong>Total: <?php echo 'RS'.$cart->total().''; ?></strong></td>
