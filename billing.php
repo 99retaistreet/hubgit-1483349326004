@@ -106,7 +106,7 @@ while ($row = db2_fetch_assoc($stmt)) {
 				<div class="row">
 					<div class="col-lg-6">
 					<div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-					<h2 class="h-ultra">Hemas medical group</h2>
+					<h2 class="h-ultra">Pierson medical group</h2>
 					</div>
 					
 	
@@ -214,6 +214,19 @@ echo "Invalid file detail ::<br> file type ::".$_FILES["file"]["type"]." , file 
 
 <div class="container" align="center">
 <div class="row">
+	<div class="col-sm-3 col-md-3">
+<div class="wow fadeInUp" data-wow-delay="0.2s">
+<div class="box text-center">
+<i class="fa fa-user-md fa-3x circled bg-skin"></i>
+<h4 class="h-bold">Consult A Doctor</h4>
+<p>
+Need A doctor Make An appiontment
+</p>
+</div>
+</div>
+</div>
+	
+	
 <div class="col-sm-6 col-md-4">
 <div class="wow fadeInUp" data-wow-delay="0.2s">
 <div class="box text-center">
